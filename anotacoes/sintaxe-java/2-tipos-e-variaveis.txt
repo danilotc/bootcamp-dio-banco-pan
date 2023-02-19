@@ -1,0 +1,37 @@
+TIPOS E VARIÁVEIS
+
+Pré-requisitos
+	- JDK instalado (ok)
+	- IDE escolhida (Eclipse)
+	- Diretório do projeto definido (ok)
+	- Integração com Github (ok)
+
+>>>>>>>>>>>>>>>>
+
+CRIAÇÃO DE UM REPOSITÓRIO NO GITHUB
+
+Como já estou organizando meus estudos aqui neste projeto, automaticamente ele já está sincronizado com um repositório, por isso não irei criar outro. Os exemplos aqui desenvolvidos poderão estar na pasta "src/praticas".
+
+
+VARIÁVEIS E CONSTANTES
+
+Variáveis : valor alterável
+Constante : valor inaltarável
+
+
+para representar valores acima de mil, usar o seguinte formato: 2500 
+se precisar representar casas decimais, usar o seguinte formato: 2500.27
+
+double salarioMinino = 2500;
+
+
+quando tenta-se atribuir um tipo maior em um tipo menor, será necessário converter os tipos antes da atribuição, causando perda de dados, essa conversão é chamada de casting.
+
+short numeroCurto = 1;
+int numeroNormal = numeroCurto;
+short numeroCurto2 = (short) numeroNormal; // casting
+
+
+variáveis podem ser alteradas, para evitar que isso aconteça defina uma variável com a palavra-chave final, isso irá transformar a variável em constante e seu valor ficará inalterável.
+
+final double VALOR_DE_PI = 3.14;

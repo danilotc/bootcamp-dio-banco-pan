@@ -1,0 +1,26 @@
+Aprendendo a Sintaxe Java
+
+1. Anatomia da Classe
+	a. estrutura inicial
+	b. padroes de nomenclatura
+	c. declarando variáveis e métodos
+	d. identação
+	e. organizando arquivos
+	f. java beans (convenções de nomenclatura)
+
+2. Tipos e Variáveis
+	b. numeros inteiros e decimais
+	c. tipos lógicos
+	d. caracteres
+	e. objetos
+	f. diferença entre variável e constante
+
+3. Operadores
+	a. aritméticos
+	b. unários
+	c. relacionais
+	d. lógicos
+	e. ternário
+
+material de apoio
+https://glysns.gitbook.io/java-basico

@@ -1,8 +1,5 @@
 # Trabalhando com Equipes Ágeis
 
-
-## Índice
-
 **Introdução à Cultura Ágil**
 - [x] Agilidade x Rapidez
 - [x] Os Valores do Manifesto Ágil

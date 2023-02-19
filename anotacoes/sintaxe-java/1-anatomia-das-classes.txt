@@ -1,0 +1,192 @@
+ANATOMIA DAS CLASSES
+
+public class MinhaClasse {
+	
+	// CORPO DA CLASSE
+	
+	public static void main(String[] args) {
+		
+		// CORPO DO MÉTODO main
+	
+	}
+}
+
+Obs.: O método main recebe seu nome main, sempre terá a visibilidade public, será difinido como static, não retornará nenhum valor com void e receberá um parâmetro do tipo array de caracteres String[].
+
+
+
+PADRÃO DE NOMENCLATURA
+
+todo arquivo .java deve começar com letra maiúscula. Se a palavra for composta, a segunda palavra também dever começar com letra maiúscula. 
+
+Exemplo:
+  	
+// arquivo CalculadoraCientifica.java
+public class CalculadoraCientifica {
+
+}
+
+toda variável dever ser escrita com letra minúscula. Se a palavra for composta, a segunda palavra deve começar com letra maiúscula. 
+
+Exemplo:
+  
+variável simples : ano
+variável composta: anoFabricacao
+  	
+se quiser definir que uma variável não poderá sofrer alterações ao longo do programa, devemos adicionar, antes do tipo, a palavra-chave 'final'. 
+
+Exemplo:
+  
+final String BR = "Brasil";
+final double PI = 3.14;
+final int ESTADOS_BRASILEIRO = 27;
+final int ANO_2000 = 2000;
+  	
+isso é conhecido como constante, segue essa convenção de escrita, tudo MAIÚSCILO.
+
+
+
+DECLARAÇÃO DE VARIAVEIS
+
+// Declação inválida de variáveis
+int numero&um = 1;  // Os únicos símbolos permitidos são _ e $
+int 1numero = 1;    // Uma variável não pode começar com númerico
+int numero um = 1;  // Não pode ter espaço no nome da variável
+int long = 1;       // long faz parte das palavras reservadas da linguagem
+ 
+// Declaração válida de veriáveis
+int numero$um = 1;
+int numero1 = 1;
+int numeroum = 1;
+int longo = 1;
+
+
+EXEMPLOS PRÁTICOS DE VARIÁVEIS
+
+String meuNome = "Danilo"  // Variavel do tipo texto
+int anoFabricacao = 2021   // Variável do tipo int
+boolean verdadeiro = true  // Variável do tipo boolean
+anoFabricacao = 2017       // Alterando valor da variável
+
+
+
+EXEMPLOS PRÁTICOS DE MÉTODOS
+
+// Estrutura
+TipoRetorno NomeObjetivoNoInfinitivo Parametro(s)
+
+public class MinhaClasse {
+	public static void main(String[] args) {
+		String primeiroNome = "Danilo";
+		String segundoNome = "Trindade";
+		String nomeCompleto = juntarNome (primeiroNome, segundoNome);
+		System.out.println(nomeCompleto);
+	}
+	
+	public static String juntarNome (String primeiroNome, String segundoNome) {
+		return "Resultado do método " + primeiroNome.concat(" ").concat(segundoNome);
+	}
+}
+
+
+
+IDENTAÇÃO DE CÓDIGO
+
+vantagens
+- compreensão a nivel de escopo
+- código escrito de forma hierárquica
+- código mais legivel
+
+Código sem identação
+
+// arquivo BoletimEstudantil.java
+
+public class BoletimEstudantil {
+public static void main(String[] args) {
+int mediaFinal = 6;
+if(mediaFinal<6)	
+System.out.println("REPROVADO"); 
+else if(mediaFinal==6)
+System.out.println("PROVA MINERVA"); 
+else
+System.out.println("APROVADO"); 		
+}
+}
+
+Código com identação
+
+public class BoletimEstudantil {
+	public static void main(String[] args) {
+		int mediaFinal = 6;
+		if (mediaFinal < 6)
+			System.out.println("REPROVADO");
+		else if (mediaFinal == 6)
+			System.out.println("PROVA MINERVA");
+		else
+			System.out.println("APROVADO");
+	}
+}
+
+>>>>>>>>>>>>>>>>
+
+PACOTES
+
+prefixos aplicados na maioria dos projetos
+	
+	comercial (com)
+	educacional (edu)
+	organizacional (org)
+	opensource (org)
+
+Empresa: HyperTech
+Pacote:
+	com.hypertech.notification
+	com.hypertech.app
+	com.hypertech.model
+	com.hypertech.util
+	com.hypertech.service
+
+Estudante: Danilo
+Pacote:
+	edu.danilo.estudos.tema.logica
+	edu.danilo.estudos.tema.controledefluxo
+	
+	edu.danilo.primeirasemana
+	edu.danilo.segundasemana
+
+>>>>>>>>>>>>>>>>
+
+JAVA BEANS
+
+formas de escrita universal para variaveis, metodos e pacotes
+
+VARIÁVEIS
+	- deve ser clara, sem abreviações ou deifinicao sem tipo
+	- deve ser declarada sempre no singular, exceto quando quando se referir a um array ou coleção
+	- definir um idioma unico para as variaveis. se declarar em ingles, defina todas em ingles
+
+Não recomendado
+
+double salMedio = 1500.23          //variável abreviada, o que dificulta a compreensão
+String emails = "aluno@escola.com" //confuso se a variável seria um array ou único e-mail
+String myName = "JOSEPH"           //se idioma pt-BR, o valor poder ser de outro idioma mas o nome da variável não 
+
+Recomendado
+
+double salarioMedio = 1500.23;
+String email = "aluno@escola.com";
+String [] emails = {"aluno@escola.com","professor@escola.com"}
+String meuNome = "JOSEPH"
+
+MÉTODOS
+- deverão ser nomeados como verbos (no infinitivo)
+- ser escrito com letra minúscula
+- se for nome composto, a segunda letra deve ser maiúscula
+
+Exemplos
+
+somar(int n1, int n2) {}
+abrirConexao() {}
+concluirProcessamento() {}
+findById(int id) {}   // não se assuste, você verá muito método em inglês em sua jornada
+calcularImprimir() {} // há algo de errado neste método, ele deveria ter uma única finalidade
