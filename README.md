@@ -19,3 +19,10 @@ Os `commits` são adicionados na estrutura conforme avanço nos estudos, contend
 ## Como ler o conteúdo deste repositório?
 
 A estrutura permite analisar cada elemento de forma individual, exemplo: se você quer ver algum desafio basta navegar até a pasta `bootcamp/desafios` e escolher um desafio para analisar, o mesmo vale para as anotações e práticas. Além disso, cada desafio pode conter arquivos (readme, txt ou pdf) com mais detalhes.
+
+
+## O que gostaria de ver?
+
+* [Anotações](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes)
+* [Práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)
+* [Desafios](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios)

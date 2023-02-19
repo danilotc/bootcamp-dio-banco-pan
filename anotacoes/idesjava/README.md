@@ -31,3 +31,10 @@
 [Este certificado](https://www.dio.me/certificate/F4A36464/share) é um símbolo que mostra o quanto estou contente por aprender um pouco mais sobre IDEs e conhecer algumas funções, atalhos e ferramentas que auxiliam o desenvolvimento no dia a dia como desenvolvedor (embora eu ainda não seja um).
 
 **Observação:** Os tópicos sobre Intellij não estão ticados porque, neste momento, estou usando um notebook mais fraco com sistema linux, considerando que esta IDE exige mais da máquina, não pude testar. Meu computador está com problema, nele tenho Windows com Git, Eclipse, Intellij e outras ferramentas, por isso ainda não há nada escrito em "anotacoes" e nem os tópicos estão ticados sobre Intellij e Windows. Contudo, acompanhei as aulas e aprendi bastante coisa, a [Camila](https://github.com/cami-la) é sensacional explicando, parabéns!
+
+
+#### Continuar explorando outros conteúdos
+
+* [Anotações](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes)
+* [Práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)
+* [Desafios](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios)

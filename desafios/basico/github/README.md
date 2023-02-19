@@ -25,3 +25,6 @@ Pré-requisito: Curso **Introdução ao Git e ao Github**
 - `git add` adiciona modificações na *stage area* (aguardando commit)
 - `git commit` confirma alterações feitas no projeto (que estavam na *stage area*)
 - `git push` envia as alterações do repositório local para o remoto
+
+
+Ver [outros desafios](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios)

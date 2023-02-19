@@ -3,4 +3,7 @@
 Aqui você encontra os desafios de projeto adicionados gradualmente conforme avanço nos estudos. Analise os desafios navegando pelos links a seguir.
 
 ## Desafios realizados
-* Git e Github
+
+**Básicos**
+
+* [Git e Github](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios/basico/github)

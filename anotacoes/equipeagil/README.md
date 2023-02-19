@@ -32,3 +32,10 @@
 ### Conclusão
 
 [Este certificado](https://www.dio.me/certificate/231C3D5E/share) é um símbolo que mostra o quanto estou contente por aprender um pouco mais sobre metodologias ágeis e conhecer algumas ferramentas, processos e conceitos por trás da agilidade das equipes.
+
+
+#### Continuar explorando outros conteúdos
+
+* [Anotações](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes)
+* [Práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)
+* [Desafios](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios)
