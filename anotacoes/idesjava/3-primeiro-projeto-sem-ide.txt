@@ -1,0 +1,49 @@
+CRIANDO PROJETO NO BLOCO DE NOTAS
+
+Um programa feito em java pode ser escrito usando um bloco de notas,
+compilado e executado usando um terminal de comando.
+
+Para isso, o código deve ser escrito no bloco de notas e salvo com 
+extensão (.java), por exemplo:
+
+class ProjetoSemIDE {
+	public static void main(String[] args) {
+		System.out.println("Hello Banco PAN!");
+	}
+}
+
+Salvar o arquivo com nome ProjetoSemIDE.java
+
+
+
+COMPILAR E EXECUTAR O PROGRAMA
+
+1. Abrir o terminal (Ctrl+Alt+T)
+
+2. Navegar até o diretório onde está a classe ou
+2.1. botão direito na pasta onde está a classe e opção "open terminal here".
+
+3. Compilar o código usando comando: javac NomeDoArquivo.java
+   
+   javac ProjetoSemIDE.java
+   
+   Essa ação irá gerar um outro arquivo bytecode com extensão (.class), este
+   é um arquivo usado pela jvm e jre para interpretar e executar todo o código 
+   em qualquer plataforma (windows, linux ou mac).
+
+4. Executar o programa usando o comando: java NomeDoArquivo
+   
+   Nota1: Para COMPILAR usa-se (javac) com nome do arquivo seguido da extensão (.java); 
+   Nota2: Para EXECUTAR usa-se (java) com nome do arquivo sem extensão (.class);
+   
+   executar = interpretar bytecode com jvm e mostar o resultado com jre:
+   
+   java ProjetoSemIDE
+   
+5. O resultado será: Hello Banco PAN!
+
+
+
+--------
+Obs.: Exemplo dessa ação pode ser conferido com imagens e exemplos descritos no arquivo
+"instalar-jdk-e-config-ambiente.pdf" presente na pasta "anotacoes" (pag. 2-3).

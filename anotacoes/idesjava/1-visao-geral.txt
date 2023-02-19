@@ -1,0 +1,114 @@
+OBJETIVOS
+
+1. conhecer um pouco da história do java
+2. a plataforma java e a linguagem java
+3. versões do java
+4. o que é ide?
+
+
+
+HISTÓRIA DO JAVA
+
+java é uma linguagem de programação orientada a objetos 
+desenvolvida na década de 90, na empresa Sun Microsystems
+e posteriormente adquirida pela Oracle em 2008.
+
+desde seu lançamento, em maio de 1995, a plataforma java 
+foi adotada mais rapidamente do que qualquer outra linguagem 
+de programação na história da computação.
+
+tornou-se popular pelo seu uso na internet e está presente em 
+navegadores, programas e jogos de computador, celular, calculadoras,
+etc...
+
+
+
+CARACTERÍSTICAS DO JAVA 
+
+diferente das linguagens de programação compiladas, (a compilação 
+do código se dá ainda em tempo de desenvolvimento) a linguagem java 
+é compilada para um bytecode que é interpretado por uma máquina virtual (JVM).
+
+C/C++ -> code -> compilação -> execução
+
+java  -> code -> compilaçãos -> interpretação -> execução
+        (.java)   (.class)           (jvm)         (os)
+
+Programa.java ==> Compilador ==> Programa.class ==> JVM ==> binário
+
+
+
+PLATAFORMA x LINGUAGEM
+
+a linguagem de programação java é a linguagem convencional da plataforma java,
+mas não é a sua única linguagem.
+
+uma grande vantagem da plataforma é a de não estar presa a um único sistema 
+operacional ou hardware, pois seus programas rodam através de uma máquina 
+virtual que pode ser emulada.
+
+ediçoes:
+    - java se (java plataform, standard edition)
+        - é a base da plataforma
+        - trás com ela algumas classes entre as plataformas
+    - java ee (java plataform, enterprise edition)
+        - cuida do desenvolvimento web
+    - java me (java plataform, micro edition)
+        - cuida de dispositivos móveis e embarcados(roda em dispositivo e tem função própria)
+
+
+
+fases da execução:
+    1. escrever o código-fonte (arquivo com extensão .java);
+    2. utilizamos o jdk para compilar o código-fonte e gerar
+       o arquivo bytecode (arquivo com extensão .class);
+    3. para executar o programa, a jvm lê o arquivo compilado 
+       (.class) e as bibliotecas padrão do java que estão no jre;
+
+jvm - java virtual machine (executa programas feitos em java) - usuário
+jdk - java development kit (desenvolver programas em java) - programador
+
+
+
+jdk x jvm x jre:
+    - jdk (java development kit) é o kit de desenvolvimento java 
+      responsável por compilar código-fonte (.java) em bytecode 
+      (.class);
+    - jre (java virtual machine) é a máquina virtual do java 
+      responsável por executar o bytecode (.class)
+    - jre (java runtime environment) ambiente de execução do 
+      java que fornece as bibliotecas padrão do java para o jdk
+      compilar o seu código e para a jvm executar seu programa.
+
+
+
+versões java:
+    - principal diferentça entre openjdk e jdk oracle: o openjdk 
+      é um java totalmente open source com uma gnu (general public 
+      license), já o jdk oracle requer uma licença comercial sob o 
+      contrato de licença de código binário oracle.
+    - os lançamentos das versões openjdk lts (suporte de longo 
+      prazo) acontecem pelo menos a cada quatro anos.
+
+
+
+o que é ide?
+    - ide, ou ambiente de desenvolvimento integrado, é um software 
+      que combina ferramentas comuns de desenvolvimento em uma única 
+      interface gráfica do usuário (gui), facilitando o desenvolvimento 
+      de aplicações.
+    - o java possui um conjunto de ferramentas para se desenvolver 
+      programas baseados nele, que são conhecidos como java development 
+      kit ou jdk, sendo este o ambiente voltado para os desenvolvedores.
+    - a jdk faz parte do funcionamento das ides - programas de desenvolvimento 
+      como intellij, eclipse, netbeans, entre outros.
+
+
+
+eclipse x intellij:
+    - (eclipse): eclipse é uma ide para desenvolvimento java, porém suporte várias outras
+      linguagens. ele foi feito em java e segue o modelo open source de desenvolvimento 
+      de software.
+    - (intellij): intellij idea é um ambiente de desenvolvimento integrado escrito em java 
+      para o desenvolvimento de software de computador. está disponível como uma edição da 
+      comunidade licenciada apache 2, [6] e em uma edição comercial proprietária.

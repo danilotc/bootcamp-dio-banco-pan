@@ -1,0 +1,126 @@
+Instalando JDK no Linux
+
+hoje é possível instalar programas no linux através de interfaces gráficas 
+pela chamada "loja de aplicativos", bastando escolher o programa que deseja
+instalar e finalizar a ação apenas clicando em um botão.
+
+entretanto, também é possível ser mais hard core fazendo essa ação através de 
+linha de comando usando um terminal. aqui vou anotar alguns passos e comandos 
+utilizados para realizar as instalações por linha de comando.
+
+antes de iniciar preciso ver se eu tenho o java instalado no meu sistema linux, 
+isso é feito usando a seguinte instrução:
+
+1. abrir o terminal (Ctrl+Alt+T);
+2. digitar o comando: java --version
+
+
+INSTALANDO JDK (jdk = jre + jvm)
+
+as instaladas feitas em distribuições linux são conhecidas como openjdk, assim 
+para instalar o java em uma distribuição linux via terminal precisamos saber a 
+versão do software e scolher o modo de execução ou desenvolvimento(jre ou jdk), 
+no meu caso será o modo de desenvolvimento (jdk).
+
+esta é a estrutura do comando: openjdk-versão-modo
+
+quero instalar a versão 11 para desenvolvimento, então preciso instalar o jdk, 
+para isso vou precisar executar o seguinte comando no terminal:
+
+sudo apt-get install openjdk-11-jdk
+
+OBS: 11 é uma versão conhecida como LTS e significa Long-Term Support, é uma 
+versão de longo período de suporte, estável e amplamente usada nas empresas. 
+Procure escolher essa para usar, não somente a 11, mas todas que possuem o 
+sufixo LTS (8, 11, 17, ...).
+
+Mais informações sobre o que é LTS aqui:
+https://canaltech.com.br/apps/o-que-e-versao-lts-180894/
+
+agora é só confirmar se o software foi instalado, use o comando:
+
+java -version
+
+
+
+FAZENDO O SISTEMA INTEIRO RECONHECER O JDK INSTALADO, mais conhecido como 
+configuração da variável de ambiente.
+
+essa configuração irá permitir criar programas em qualquer local do sistema 
+e poder compilar e executar diretamente desse local, do contrário, todos os
+projetos teriam que ser criados dentro da pasta bin para serem compilados,
+essa configuração evita tal necessidade.
+
+que pasta bin é essa?
+
+é a pasta onde estão todos os aquivos responsáveis por compilar e executar 
+um programa escrito em java, por isso os projetos teríam que estar dentro 
+dessa pasta, só assim o comando de compilação seria reconhecido.
+
+passos da configuração:
+
+1. verificar o caminho do jdk que foi instalado: 
+   sudo update-alternatives --config java
+
+2. copiar o caminho que aparecerá no terminal, algo parecido com isso:
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+
+3. editar o arquivo .bashrc:
+   sudo nano ~/.bashrc
+
+4. colar o trecho abaixo no final do arquivo:
+
+   JAVA_HOME = colar_caminho_obtido_no_passo_2
+   export JAVA_HOME
+   export PATH=$PATH:$JAVA_HOME
+
+5. colar o caminho obtido no passo 2 e atribuir à variável JAVA_HOME, sem o "/bin/java":
+
+   JAVA_HOME = /usr/lib/jvm/java-11-openjdk-amd64
+
+   ao terminar digite:
+      1. (Crtl+O) para salvar modificações no arquivo
+      2. (Enter)  para confirmar alterações salvas
+      3. (Ctrl+X) para sair do editor e voltar ao terminal
+
+6. conferir se a variável JAVA_HOME está sendo reconhecida pelo sistema:
+   echo $JAVA_HOME
+   terá que aparecer o caminho do jdk.
+
+com isso podemos escrever, compilar e executar arquivos java em qualquer 
+pasta do sistema operacional. agora o sitema está preparado para trabalhar 
+com o desenvolvimento de programas em java.
+
+confir se o java realmente está instalado: java -version
+
+consultar o arquivo "instalar-jdk-e-config-ambiente.pdf" para mais detalhes 
+com exemplos e imagens mostrando os passos da configuração e da criação de
+um programa para ser compilado e executado no ambiente linux.
+
+Créditos: DevSuperior
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+Instalação da IDE Eclipse
+
+Não é necessário ter o Eclipse instalado para começar a programar, mas é necessário 
+ter o JDK instalado com as variáveis de ambiente devidamente configuradas, pois sem 
+ele não será possível executar os programas que forem desenvolvidos em Java.
+
+Se o JDK estiver instalado, tais programas podem ser desenvolvidos usando um bloco de 
+notas e executados usando um terminal de comando como CMD do Windows, por exemplo.
+
+Em seguida, o Eclipse não é um programa instalável, basta baixar a IDE compactada no 
+link https://www.eclipse.org/downloads/packages e escolher uma das opções utilizadas 
+para escrever códigos em Java, as opções são:
+
+- Eclipse IDE for Java Developers ou
+- Eclipse IDE for Enterprise Java and Web Developers
+
+Após o download basta descompactar o arquivo em um diretório do sistema operacional, 
+acessar o arquivo eclipse.exe (Windows) ou somente eclipse (Linux) e executá-lo com 
+duplo clique.
+
+---
+Excerto extraído da minha resposta a um determinado trabalho na faculdade sobre 
+como executar um programa java usando a ide eclipse.
