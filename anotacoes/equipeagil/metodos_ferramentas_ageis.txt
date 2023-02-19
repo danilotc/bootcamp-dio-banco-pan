@@ -1,0 +1,288 @@
+O QUE É SCRUM
+
+métodos Ágeis
+    - framework Scrum
+    - extreme Programming (XP)
+    - kanban
+    - OKR
+
+Scrum
+
+"Scrum é um framework leve que ajuda pessoas, times e organizações a gerar valor 
+por meio de soluções adaptativas para problemas complexos."
+
+Scrum Guide (Nov. 2020, p4)
+
+ler o guia do scrum no site:
+https://www.scrum.org/resources/scrum-guide
+
+
+scrum está fundamentado em duas bases (teoria do scrum):
+    - empirismo
+    - lean thinking (linha de pensamento criado pela toiota?)
+
+
+pilares do scrum
+
+transparência
+    a transparência permite que todos os ânglos de qualquer processo Scrum
+    sejam observados por qualquer pessoa. Isto promove um fluxo de informação
+    fácil e transparente em toda a organização e cria uma cultura de Trabalha
+    aberta.
+
+inspeção
+    a inspeção é a arte de pensar, no sentido de aplicar uma visão crítica sobre o que está
+    acontecendo. É detectar variações ou problemas potencialmente indesejáveis.
+        - olhando e medindo o progresso do time
+        - feedback dos clientes e stakeholders
+        - inspeção e aprovação das entregas
+
+adaptação
+    a adaptação acontece quanto o Time Scrum aprende através da transparência
+    e da inspeção e, em seguida, adaptam o processo ao fazerem melhorias no
+    trabalho que está sendo realizado, evitando, também, novos desvios.
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+O FRAMEWORK SCRUM
+
+framework ou metodologia ágil?
+    - O framework scrum é propositalmente incompleto, apenas definindo as partes necessárias
+      para implementar a teoria scrum.
+    - em vez de fornecer às pessoas instruções detalhadas, as regras no Guia do Scrum orientam
+      seus relacionamentos e interações.
+    
+    Scrum Guida (Nov. 2020)
+
+na metodologia é claro:
+    - por que tem que ser feito
+    - o que deve ser feito
+    - como deve ser feito (passo a passo)
+
+ler "what is scrum" neste link para mais informações:
+https://www.scrum.org/resources/what-is-scrum
+
+
+1. product backlog - lista de tarefas
+
+2. sprint planning - planejamento, o que será feito em cada sprint
+
+3. scprint backlog - definições da sprint (o que será feito neste momento)
+
+product owner (PO) - dono do projeto
+scrum master (SM)  - gerente, mantem tudo alinhado
+developers         - time
+
+4. daily scrum - reunião [diária] (15min) durante a sprint
+
+5. sprint review - validar sprint após terminar
+
+6. increment - terá um incremento no projeto (próxima sprint?)
+
+7. sprint retrospective - reflexão da sprint finalizada, o que pode ser melhorado
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+O QUE É XP (Extreme Programming)
+
+extreme programming (xp) é um método ágil criado no final da década de 90
+para desenvolvimento de software.
+
+é uma metodologia que tem como objetivo criar sistemas com qualidade, com
+base em uma interação próxima com os clientes, testagem constante e ciclos
+de desenvolvimento curtos.
+
+objetivo principal: fazer ciclos de entregas rápidos, contínuos e incrementais,
+para atingir os resultados esperados pelo cliente.
+
+planeja -> faz -> testa/mensura -> melhora/incrementa -> planeja
+
+o que tem no xp?
+    - cliclos
+    - "cerimônias"
+    - testes
+    - programação em pares
+    - feedback
+    - aproximação com o cliente
+    - flexibilidade
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+KANBAN
+
+o que é?
+
+é um método para definir, gerenciar e melhorar serviços que entregam trabalho 
+de conhecimento, como serviços profissionais, atividades criativas e o design 
+de produtos físicos e de software.
+
+a simplicidade e os benefífios que o método proporciona, faz dele um dos mais 
+utilizados em empresas de todos os segmentos.
+
+história...
+
+- desenvolvido pela toyota na década de 40
+- para solucionar problemas de produção com foco em gestão de estoque
+
+situações:
+(+)estoque = (-)produtos em circulação no mercado
+(-)produto/estoque = (-)suprir a demanda que os seus clientes necessitam = (+)concorrência
+
+com o intuito de equilibrar a sua produção para evitar essas duas situações, a toyota
+(fabricante de automóveis) desenvolveu o método kanban na década de 1940, que foi 
+englobado como uma parte do sistema toyota de produção.
+
+o seu objetivo era promover o controle do estoque de materiais para que os produtos 
+não excedessem e nem faltassem, trazendo equilíbrio para o seu estoque e linha de 
+produção. (princípio lean)
+
+na atualidade, o quadro kanban ultrapassou os limites da indústria e passou a ser 
+utilizado em diferentes áreas, como:
+    - em equipes de marketing
+    - prestação de serviços
+    - desenvolvimento de softwares
+
+funcionando como uma ferramenta de gestão de tarefas.
+
+
+o quadro kanban
+
+to do | doing | done
+--------------------
+task  | task  | tast
+task  |       |
+  ->     ->      ->
+
+
+curiosidades
+
+Kanban = método
+kanban = palavra japonesa = "cartão"
+
+a palavra japonesa "kanban" significa:
+"sinal" / "placa de sinalização" / "cartão"
+
+ler mais sobre essa metodologia no artigo:
+https://www.alura.com.br/artigos/metodo-kanban
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+O QUE É OKR?
+
+Objectives
+Key
+Results
+
+o OKR é um método de gestão ágil que foi criado pelo ex-CEO da intel
+andrew Grove e tem como objetivo simplificar a forma de encarar os 
+chamados principais objetivos estratégicos de uma empresa.
+
+pode ter certeza de que o método funciona, já que é usado no Google
+desde 1999.
+
+Objectives
+os objetivos do OKR são DESCRIÇÕES QUALITATIVAS que apontam a direção
+que deverá ser seguida pela empresa.
+
+    - claro
+    - inspirador
+    - desafiador
+    - alinhado com a missão do negócio
+
+em alguns casos, os objetivos também podem trazer números (ex.: aumentar
+lucro em 10%), mas sempre direcionados a um propósito mais amplo.
+
+exemplos
+
+os objetivos (objetives) do OKR são descrições qualitativas que apontam a
+direção que deverá ser seguida pela empresa.
+
+    - criar uma experiência inesquecível para o cliente em todos os pontos de contato.
+    - creacer as vendas na região sul do país, dominando a região.
+    - tornar-se referência nacional e autoridade absoluta na área de educação em tecnologia.
+
+tenho norte, tenho a direção, mas e o caminho?
+
+Key Results
+os resultados-chave, também chamados de KRs, são as METAS que determinam
+o atingimento do objetivo na metodologia OKR.
+
+    - baseadas em indicadores-chave de desempenho (KPIs).
+    - quantidativas.
+    - smart: específicas, mensuráveis, atingíveis, relevantes e temporais.
+
+os Key Results servirão de referência para indicar o PROGRESSO em direção 
+ao objetivo principal.
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+EXEMPLO OKR
+
+objetivo:
+criar uma experiência inesquecível para o cliente em todos os pontos de contato.
+
+KR1 - integrar a base de dados dos 5 canais de atendimento (é smart).
+KR2 - contratar mais 15 atendentes e 1 gestor de comunidade.
+KR3 - alcançar um NPS (índice de satisfação do cliente) de 80%.
+
+geralmente haverá para cada objetivo de 2-5 resultados-chave.
+depende da estratégia da empresa (por ano, mensais, bimestrais...).
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+BENEFÍCIOS DO OKR
+
+    - agilidade
+    - cooperação
+    - transparência
+    - monitoramento contínuo
+        - reuniões periódicas
+        - métricas (KPIs)
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+[algumas] FERRAMENTAS PARA GESTÃO ÁGIL
+
+    - trello
+    - notion
+    - miro
+    - monday
+    - easyretro
+    - jira
+    - clickup (usado na dio)
+    - pipefy
+    - asana
+
+free     = gratuita
+freemium = parte gratuita (com limitações), parte paga (completa)
+premium  = pago
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+importante compreender:
+    - o que é ser ágil
+    - os princípios da gestão ágil
+    - os principais metodos e ferramentas ágeis
+    - as características de um time ágil
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+links úteis
+
+manifesto para desenvolvimento ágil de software
+https://agilemanifesto.org/iso/ptbr/maifesto.html
+
+scrum.org
+https://www.scrum.org
+
+download - scrum guide
+https://scrumguides.org/index.html
+
+Kanban university
+https://kanban.university
+
+livros
+
+minset (a nova psicologia do sucesso)
+anti-frágil (coisas que se beneficiam no caos)
+scrum (a arte de fazer o dobro do trabalho na mentade do tempo)

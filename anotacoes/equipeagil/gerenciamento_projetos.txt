@@ -1,0 +1,55 @@
+DIFERENÇA ENTRE PROJETO x PROCESSO
+
+processo:
+  - é recorrente e contínuo
+  - é replicável
+  - geralmente é repetitivo e realizado regularmente
+
+projeto:
+  - um esforço temporário para atingir um objetivo
+  - o resultado é exclusivo
+  - tem início e fim bem definidos
+
+
+MODELO ÁGIL x TRADICIONAL
+
+abordagem tradicional utiliza-se da estrutura em cascata de waterfall
+  
+analise:
+  - projeto
+    - implementação
+      - teste
+        - entrega/manutenção
+
+
+abordagem ágil com scrum
+
+- utiliza-se de sprints que são momentos de entregas
+- cada ciclo incrementa valor e entrega ao cliente
+
+
+cascata
+- panejamento inicial
+   - escopo
+   - custo
+   - cronograma
+   - valor entregue no final
+
+scrum
+  - planejamento por sprints
+  - desenvolvimento iterativo e incremental
+  - valor entregue continuamente
+  - a cada entrega tem-se feedback da equipe e do cliente
+
+
+a melhor abordagem a ser adodata sempre depende do tipo
+de projeto a ser implementado.
+
+
+O QUE É GESTÃO ÁGIL
+
+uma forma de gestão que seja...
+  - flexível e que se adapte às mudanças
+  - colaborativa e que gere transparência
+  - voltada ao aprendizado
+  - entrega contínua de valor
