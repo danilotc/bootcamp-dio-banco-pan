@@ -7,4 +7,4 @@ Aqui você encontra os desafios de projeto adicionados gradualmente conforme ava
 **Básicos**
 
 * [Git e Github](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios/basico/github)
-* [Git e Github](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios/basico/fabrica-de-carros)
+* [Fabrica de Carros](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios/basico/fabrica-de-carros)
