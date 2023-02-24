@@ -1,0 +1,96 @@
+Keywords
+-------------------------------------------------------------
+abstract    continue 	for 	    new 	    switch
+assert***   default 	goto* 	    package 	synchronized
+boolean     do 	        if 	        private 	this
+break       double      implements  protected 	throw
+byte 	    else        import 	    public 	    throws
+case 	    enum**** 	instanceof  return 	    transient
+catch 	    extends 	int 	    short 	    try
+char 	    final       interface   static 	    void
+class 	    finally 	long 	    strictfp** 	volatile
+const* 	    float 	    native 	    super 	    while
+-------------------------------------------------------------
+*     not used
+**    added in 1.2
+***   added in 1.4
+****  added in 5.0
+-------------------------------------------------------------
+
+Controle de pacote:
+	- import
+	- package
+
+Modificadores de acesso:
+	- public
+	- private
+	- protected
+
+Primitivos:
+	- boolean
+	- byte
+	- char
+	- double
+	- float
+	- int
+	- long
+	- short
+	- void
+
+Modificadores de classes, variaveis ou metodos:
+	- abstract
+	- class
+	- extends
+	- final
+	- implements
+	- interface
+	- new
+	- static
+	- synchronized
+	- transient
+	-----------
+	- volatile
+	- strictfp
+	- native
+
+Controle de fluxo dentro de um bloco de codigo:
+	- break
+	- case
+	- continue
+	- default
+	- do
+	- else
+	- for
+	- if
+	- instanceof
+	- return
+	- switch
+	- while
+
+Tratamento de erros:
+	- catch
+	- finally
+	- throw
+	- throws
+	- try
+
+Variaveis de referencia:
+	- super
+	- this
+
+Palavras-reservadas nao utilizadas:
+	- const
+	- goto
+
+Literais reservados:
+	- null
+	- true
+	- false
+
+
+-------------------------------------------------------------
+Material complementar com mais informacoes:
+https://glysns.gitbook.io/java-basico/sintaxe/palavras-reservadas
+
+Palavras-reservadas em Java
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
