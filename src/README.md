@@ -7,6 +7,8 @@ Aqui você encontra alguns programas desenvolvidos com intuito de praticar os co
 
 * [Atalhos de teclado](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/atalhos)
 * [Debug com Eclipse](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/debug)
+* [Documentação Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/javadoc)
+* [Java no Terminal](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/terminal)
 
 ## Desafios realizados
 
