@@ -1,0 +1,92 @@
+Terminal e Argumentos
+	- main args
+	- Scanner
+	- Execução via IDE
+	- Execução via prompt de comando
+
+considerar a classe para teste
+
+public class MinhaClasse {
+	public static void main(String[] args) {
+		System.out.println("Oi, fui executado pelo Terminal");
+	}
+}
+
+na pasta bin do projeto estarão os arquivos .class (bytecode), é esse arquivo que precisamos executar via terminal.
+
+acessando terminal
+Ctrl+Alt+T
+
+acessando pasta bin
+cd <caminho da pasta bin>
+
+executando arquivo .class
+java MinhaClasse
+
+
+ARGUMENTOS
+
+public class SobreMim {
+	public static void main(String[] args) {
+		String nome = args[0];
+		String sobrenome = args[1];
+		int idade = Integer.valueOf(args[2]);
+		double altura = Double.valueOf(args[3]);
+		
+		System.out.println("Olá, me chamo " + nome + " " + sobrenome);
+		System.out.println("Tenho " + idade + " anos");
+		System.out.println("Minha altura é " + altura + "cm");
+	}
+}
+
+executando a classe
+Obs. os parametros sao separados por espaço apos o nome da classe
+
+java SobreMim Danilo Trindade 35 1.85
+
+
+SCANNER
+
+import java.util.Locale;
+import java.util.Scanner;
+public class SobreMim {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in).useLocale(Locale.US);
+		
+		System.out.println("Digite seu nome");
+		String nome = entrada.next();
+		
+		System.out.println("Digite seu sobrenome");
+		String sobrenome = entrada.next();
+		
+		System.out.println("Digite sua idade");
+		int idade = entrada.nextInt();
+		
+		System.out.println("Digite sua altura");
+		double altura = entrada.nextDouble();
+		
+		System.out.println("Olá, me chamo " + nome + " " + sobrenome);
+		System.out.println("Tenho " + idade + " anos");
+		System.out.println("Minha altura é " + altura + "cm");
+	}
+}
+
+executando classe via terminal
+
+Digite seu nome
+<aguarda nome>
+
+Digite seu sobrenome
+<aguarda sobrenome>
+
+Digite sua idade
+<aguarda idade>
+
+Digite sua altura
+<aguarda altura>
+
+
+--------
+Executando arquivos via terminal, este vídeo foi produzido durante uma disciplina na faculdade para ajudar alguns colegas que estavam com certa dificuldade para realizar exatamente este processo.
+
+https://drive.google.com/file/d/1f416zkkWa2qylGGtm4m1xMlnNjLZERjl/view
