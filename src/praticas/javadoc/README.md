@@ -18,6 +18,9 @@ Para gerar um documento com base em todos os comentários de documentação `/**
 ```
 javadoc -encoding UTF-8 -docencoding ISO-8859-1  -d ../docs  src/*.java
 ```
+
+Exemplo prático de comentários de documentação, veja a classe **Calculadora.java** para analisar o exemplo completo.
+
 ```
 /**
  * Esta calculadora faz as quatro operações básicas de
