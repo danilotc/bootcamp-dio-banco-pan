@@ -54,4 +54,4 @@ A partir das referências abaixo é possível entender mais sobre como gerar doc
 
 ---
 
-Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas)
+Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)

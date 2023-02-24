@@ -25,4 +25,4 @@ O diagrama de classe a seguir representa as classes criadas para treinar esses a
 
 ---
 
-Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas)
+Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)

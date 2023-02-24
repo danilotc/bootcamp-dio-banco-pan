@@ -11,4 +11,4 @@ O diagrama de classe a seguir representa a classe criada para explorar os recurs
 
 ---
 
-Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas)
+Ver [outras práticas](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src)
