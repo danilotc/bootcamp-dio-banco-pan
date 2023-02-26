@@ -1,0 +1,139 @@
+Lógica Condicional e Controle de Fluxo
+
+operadores relacionais
+	- apresentacao do curso
+	- o que são operadores relacionais
+	- utilizando operadores relacionais
+	- exercícios de exemplo
+	- resolução do exercício
+operadores lógicos
+	- o que são operadores lógicos
+	- como utilizar operadores lógicos
+	- exemplos, boas práticas e exercitando
+	- resolução do exercício
+controle de fluxo
+	- o que é controle de fluxo
+	- criando estruturas de controle de fluxo
+	- boas práticas
+	- exercício de controle de fluxo
+blocos
+	- blocos, tipos e uso
+	- encerramento do curso
+
+>>>>>>>>>>>>>>>>>>>>>>
+
+***** OPERADORES RELACIONAIS *****
+
+dois tipos (simobologia)
+	- similaridade: igual, diferente
+		==, !=
+	- tamanho: maior, maior igual, menor, menor igual
+		>, >=, <, <=
+
+exemplos
+
+int i1=10; int i2=20; float f1=4.5f; float f2=3.5f;
+char c1='x'; char c2='y'; String s1="Fulano"; String s2="Fulano";
+boolean b1=true; boolean b2=false; 
+
+i1==i2, i1!=i2, i1>i2, i1<=i2
+f1==f2, f1!=f2, f1>=f2, f1<f2
+c1==c2, c1!=c2, c1>c2, c1<=c2
+s1==s2, s1!=s2, s1>=s2, s1<s2
+b1==b2, b1!=b2, b1>b2, b1<=i1
+i2>f1
+
+
+***** OPERACOES LOGICAS *****
+
+and (&&) - junção
+or  (||) - disjunção
+xor (^)  - disjunção exclusiva
+not (!)  - inversão
+
+
+***** CONTROLE DE FLUXO *****
+
+if     (se)
+switch (escolha)
+?:     (ternário)
+
+if, if-else, if-else-if, if-else-if-else
+
+if(condicao){
+}
+
+fi(condicao){
+}else{
+}
+
+if(condicao){
+}else if(condicao){
+}else{
+}
+-------------------
+if(idade > 18){
+}
+
+if(aprovado){
+}else{
+}
+
+if(casado && temFilhos){
+}else if(casado && semFilhos){
+}else{
+}
+
+
+Operador ternário:
+
+        
+    ____true____
+   |            |
+condicao  ?   exp 1   :  exp 2
+   |                       |
+   -----------------false---
+
+
+Exemplos:
+
+condicao ? true : false;
+
+// eh possivel nao ter valor no else, neste caso use null
+condicao ? true : null;
+
+ligado ? desligar : ligar;
+
+emMovimento : frear : null;
+
+
+switch
+
+byte
+short
+char
+int     - mais usado
+Enum    - mais usado
+String  - mais usado
+
+
+***** BLOCOS *****
+
+tres tipos:
+	locais: dentro de métodos
+	estáticos: dentro de classes
+	instancia: dentro de classes
+
+criacao:
+{...}
+
+if(condicao)
+	apenas uma instrucao
+
+if(condicao) {
+	duas ou mais
+	instrucoes sera
+	necessrio inserir
+	as chaves de forma
+	explicita
+}
