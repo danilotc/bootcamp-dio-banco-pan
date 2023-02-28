@@ -1,0 +1,58 @@
+Estrutura de Repeticao e Arrays em Java
+
+1. Conhecer as estruturas de repeticao
+2. Arrays na linguagem Java (vi na faculdade)
+3. Estrutura for-each (usei na faculdade)
+
+1. while
+2. do-while
+3. for
+4. Controle de Repeticao: break e continue
+5. Arrays
+6. for-each
+
+
+As estruturas de repetição podem ser classificadas em:
+	- repeticao com teste no inicio (while)
+	- repeticao com teste no final (do-while)
+	- repeticao contada (for)
+	- comando break é utilizado para terminar de forma abrupta uma repeticao
+	- quando o comando continue'e executado, os comandos restantes da repetição
+	  são ignorados e o programa volta a testar novamente a condição
+
+
+
+***** OPERADORES DE INCREMENTO *****
+
+pré-fixados
+	++numero ==> numero = numero + 1 (retorna numero)
+	--numero ==> numero = numero - 1 (retorna numero)
+
+pós-fixados
+	numero++ ==> (retorna numero) numero = numero + 1
+	numero-- ==> (retorna numero) numero = numero - 1
+
+
+
+**** ARITMEDICA *****
+
+numero += k ==> numero = numero + k
+numero -= k ==> numero = numero - k
+numero *= k ==> numero = numero * k
+numero /= k ==> numero = numero / k
+
+
+
+***** ARRAYS *****
+
+objeto utilizado para armazenar sequencialmente dados do mesmo tipo
+
+Array Unidimensional
+	variavel[indice]
+
+Array Multidimensional
+	variavel[linha][coluna]
+
+
+repositorio que a professora disponibilizou
+https://github.com/cami-la/loops-e-arrays
