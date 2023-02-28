@@ -3,8 +3,8 @@
 - [x] Arrays
 	- [x] Ordem inversa
 	- [x] Consoantes
-	- [ ] Números aleatórios
-	- [ ] Array Multidimensional
+	- [x] Números aleatórios
+	- [x] Array Multidimensional
 
 ---
 
