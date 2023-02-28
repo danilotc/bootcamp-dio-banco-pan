@@ -11,7 +11,7 @@ public class Exercicio01ArrayComOrdemInversa {
 		int cont = 0;
 		
 		System.out.print("Vetor: ");
-		while (cont < (vetor.length)) {
+		while (cont < vetor.length) {
 			System.out.print(vetor[cont] + " ");
 			cont++;
 		}
