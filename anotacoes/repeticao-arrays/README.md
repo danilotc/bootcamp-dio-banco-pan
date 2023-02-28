@@ -14,12 +14,16 @@
 - [x] Arrays
 	- [x] Ordem inversa
 	- [x] Consoantes
-	- [ ] Números aleatórios
-	- [ ] Array Multidimensional
+	- [x] Números aleatórios
+	- [x] Array Multidimensional
 - [x] for-each
 
 
 ---
+
+### Conclusão
+
+[Este certificado](https://www.dio.me/certificate/06EEE56F/share) é um símbolo que mostra o quanto estou contente por relembrar e aprender um pouco mais sobre lógica condicional e fluxos de controle em Java.
 
 
 #### Continuar explorando outros conteúdos
