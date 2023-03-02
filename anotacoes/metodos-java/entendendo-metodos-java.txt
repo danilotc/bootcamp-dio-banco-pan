@@ -1,0 +1,170 @@
+Entendendo Métodos Java
+
+	- entender o que é um metodo
+	- saber como definir e utilizar metodos
+	- aplicar boas praticas em sua criacao e uso
+
+todo metodo eh criado dentro de uma classe.
+eh executado a partir de chamada, eh preciso chama-lo para que ele funcione.
+
+<visibilidade> <tipo> <modificador> retorno nome (<parametros>) <excecoes> corpo
+
+V public, protected ou private
+T concreto ou abstrato
+M static ou final
+R tipo de dado ou void
+N nome que é fornecido ao metodo
+P parametros que pode receber
+E excecoes que pode lancar
+C codigo que possui ou vazio
+
+exemplos
+
+public String getNome() {...}
+public double calcularTotalNota() {...}
+public int verificarDistancia(int coodenada1, int cordenada2) {...}
+public abstract void executar();
+public void alterarFabricante(Fabricante fabricante) {...}
+public Relatorio gerarDadosAnaliticos(Cliente cliente) {...}
+List<Compra> compras) {...}
+
+public static R N(P) {...}
+
+
+
+utilizacao
+
+nome_da_classe.nome_do_metodo();
+nome_do_objeto.nome_do_metodo();
+
+Math.random(); ou Math.sqrt(4);
+usuario.getEmail(); ou usuario.alterarEndereco(endereco);
+
+
+definicao da assinatura de um metodo eh feito da seguinte forma:
+assinatura = nome + parametros
+
+
+passagem de parametros
+
+	- por valor (copia)
+	- por referencia (endereco)
+
+
+passagem por cópia
+
+int i = 10;
+public void fazerAlgo(int i) {
+	i = i + 10;
+	System.out.println("Valor de i dentro: " + i);
+}
+System.out.println("Valor de i fora: " + i);
+
+
+---
+repositorio com os codigos mostrados em aula para analisar depois
+https://github.com/tlcdio/MAula01
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+sobrecarga
+
+
+sobrecarga mantem o nome e muda lista de parametros, assinatura
+
+
+sobrecarga x sobrescrita 
+(analisar diferenca no modulo da faculdade)
+
+
+Exercicio: criar uma aplicacao que  calcula a area dos 3 quadrilateros 
+notaveis: quadrado, retangulo e trapezio. use sobrecarga de metodo.
+
+
+public class Quadrilatero {
+    public static void area(double lado) {
+        System.out.println("Área do quadrado:" + lado*lado);
+    }
+
+    public static void area(double lado1, double lado2) {
+        System.out.println("Área do retângulo:" + lado1*lado2);
+    }
+
+    public static void area(double baseMaior, double baseMenor, double altura) {
+        System.out.println("Área do trapézio:" + ((baseMaior+baseMenor)*altura)/2);
+    }
+
+    public static void area(float diagonal1, float diagonal2) {
+        System.out.println("Área do losango:" + (diagonal1*diagonal2)/2);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Quadrilátero
+        System.out.println("Exercício quadrilátero");
+        Quadrilatero.area(3);
+        Quadrilatero.area(5d,5d);
+        Quadrilatero.area(7,8,9);
+        Quadrilatero.area(5f,5f);
+    }
+}
+
+---
+link com o codigo utilizado para analisar
+https://github.com/tlcdio/MAula02
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+outro exercicio
+
+
+public class Quadrilatero {
+    public static double area(double lado) {
+        return lado*lado;
+    }
+
+    public static double area(double lado1, double lado2) {
+        return lado1*lado2;
+    }
+
+    public static double area(double baseMaior, double baseMenor, double altura) {
+        return ((baseMaior+baseMenor)*altura)/2;
+    }
+
+    public static float area(float diagonal1, float diagonal2) {
+        return (diagonal1*diagonal2)/2;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Quadrilátero
+        System.out.println("Exercício quadrilátero");
+        
+        System.out.println( Quadrilatero.area(3) );
+        System.out.println( Quadrilatero.area(5d,5d) );
+        System.out.println( Quadrilatero.area(7,8,9) );
+        System.out.println( Quadrilatero.area(5f,5f) );
+    }
+}
+
+
+se esse return for executado ele interrompera a execucao do metodo,
+isso eh semelhante ao break das estrutras de repeticao (?) - testar
+
+public void teste() {
+	//instrucao
+	//instrucao
+	return;
+	//instrucao
+	//instrucao
+}
+
+---
+link com o codigo utilizado pelo professor nessa aula para analiar com calma
+https://github.com/tlcdio/MAula03
