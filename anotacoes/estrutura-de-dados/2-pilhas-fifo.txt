@@ -1,0 +1,39 @@
+Pilhas [LIFO: Last In, First Out]
+
+pensar em uma pilha de livros...
+
+essa estrutura segue literalmente o comportamento de uma 
+pilha de livros mesmo, ou seja, o último livro colocado
+na pilha será o primeiro a ser retirado.
+
+regra
+
+LIFO 
+ - Last In, First Out
+ - O último elemento que entra é o primeiro a sair	
+
+.top()
+.pop()
+.push()
+
+verifica referencia
+
+public boolean isEmpty(){
+	if(refNo == null){
+		return true;
+	}
+	return false;
+}
+
+
+
+*** implementando pilha ***
+
+implementacao de dados dinamica != de vetor
+
+
+oberver codigo-fonte em src.praticas.estruturadados
+
+---
+analisar repositorio da aula 2 sobre pilha (lifo)
+https://github.com/jrdutra/estruturaDeDadosJavaDio/tree/main/apresentacoes/Aula2
