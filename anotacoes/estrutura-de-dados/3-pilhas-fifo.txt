@@ -1,0 +1,17 @@
+Pilhas [FIFI: First In, First Out]
+
+principais métodos que sera implementado:
+ .enqueue() - enfileirar
+ .dequeue() - desenfileirar (tira o primeiro elemento da fila)
+ .isEmpty() - verificar se está vazio
+
+1. implementar a classe No
+2. implementar a class Fila
+3. instanciar objetos do tipo Fila
+
+usando generics conseguimos manter a 'segurança' do código na hora
+da execução, pois o compilador não deixará algumas coisas acontecer
+como adicionar valores de vários tipos em uma fila.
+
+analisar esses materiais com mais calma
+https://github.com/jrdutra/estruturaDeDadosJavaDio/tree/main/apresentacoes/Aula3
