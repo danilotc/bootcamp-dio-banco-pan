@@ -16,3 +16,5 @@ Aqui você encontra alguns programas desenvolvidos com intuito de praticar os co
 
 * [Fabrica de Carros](https://github.com/danilotc/bootcamp-dio-banco-pan/blob/main/desafios/basico/fabrica-de-carros)
 * [Imprimindo Positivos e Média](https://github.com/danilotc/bootcamp-dio-banco-pan/blob/main/desafios/basico/positivos-e-media)
+* [Calculando H com N Termos](https://github.com/danilotc/bootcamp-dio-banco-pan/blob/main/desafios/basico/h-com-n-termos)
+* [Dragão](https://github.com/danilotc/bootcamp-dio-banco-pan/blob/main/desafios/basico/dragao)
