@@ -1,0 +1,44 @@
+Lista duplamente encadeada
+
+tem duas referencias:
+	- uma para o proximo nó
+	- outra para o nó anterior
+
+
+métodos que serão implementados
+	.add(el)
+	.add(index, el) //sobrecarca de add
+	.remove(index)
+	.get()
+
+
+classe NoDuplo.java
+	- criar uma classe genérico
+	- criar dois nós
+	- criar construtor apenas com conteudo
+	- criar getter e setter
+	- criar tostring mostrando apenas conteudo
+
+classe ListaDuplamenteEncadeada.java
+	- criar uma classe genérica
+	- criar dois atributos nós (anterior e proximo)
+	- criar um atributo int para tamanho da lista
+	- inicializar atributos com valores padrão a partir do construtor
+	- criar metodo size() retornando inteiro que é a atributo
+	----
+	- criar metodo getNo(index) retornando NoDuplo<T>
+	- criar metodo get(index) retornando T
+	----
+	- criar metodo add(el) para adicionar no final da lista
+	----
+	- criar sobrecarga do metodo add(index, el)
+	----
+	- criar metodo remove(index)
+		- necessario implementar uma exception para evitar nullpointerexception
+	- criar sobrecarga do metodo toString
+	----
+	- usando a classe ListaDuplamenteEncadeada.java
+
+
+-----
+https://github.com/jrdutra/estruturaDeDadosJavaDio/tree/main/apresentacoes/Aula5

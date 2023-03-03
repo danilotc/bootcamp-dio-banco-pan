@@ -1,4 +1,4 @@
-package praticas.estruturadados.encadeada;
+package praticas.estruturadados.listaencadeada;
 
 public class No<T> {
 	
