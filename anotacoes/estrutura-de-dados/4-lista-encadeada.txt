@@ -1,0 +1,10 @@
+Listas Encadeadas
+
+principais métodos para implementar:
+ .add()     - adiciona nó
+ .remove()  - remove nó
+ .isEmpty() - verifica se está vazio
+ .get()     - pega nó
+
+
+https://github.com/jrdutra/estruturaDeDadosJavaDio/tree/main/apresentacoes/Aula4
