@@ -1,0 +1,202 @@
+Recomendação de leitura, livro escrito pelo professor e publicado pela casa do código: 
+https://www.casadocodigo.com.br/products/livro-oo-conceitos
+
+---
+esse curso deveria vir antes de estruturas de dados, a ordem em que
+as aulas foram distribuidas no curso não pode ser seguida de forma
+linear, como foi dito pelo Renan Oliveira (SEO da Dio?).
+---
+
+
+percurso do curso:
+- por que usar?
+- fundamentos
+- estrutura
+- relações (herança, associação, interface)
+- pacotes
+
+
+requisitos:
+- logica de programacao
+- vontade de aprender (isso não me falta)
+
+
+PE vs OO
+- PE: foca mais no "como fazer"
+- OO: foca mais no "o que fazer"
+
+Gap semantico é a diferença entre representacoes
+
+
+Exercicio 1:
+Levando em consideracao uma loja on-line de livros,
+modele uma entidade livro.
+
+-autor
+-assunto
+-titulo
+-isbn
+-quantidade de paginas
+-editora
+
+faça as coisas pensando no presente e não no futuro, pois você
+pode desenvolver coisas que nem serão utilizadas
+
+
+
+
+*** Estrutura básica ***
+
+conceitos basicos da oo:
+-classe
+-atributo
+-metodo
+-objeto
+-mensagem
+
+uma classe deve:
+-substantivos
+-nomes signifcativos
+-contexto deve ser considerado
+
+
+
+
+Exercicio 2:
+Criar a classe "Carro"
+
+class Carro {}
+
+
+
+
+Exericio 3:
+evolua o exercicio 2 e defina 3 atributos para sua classe
+"Carro: cor, modelo e capacidade do tanque.
+
+class Carro {
+	String cor;
+	String modelo;
+	int capacidadeTanque;
+}
+
+
+
+
+** metodos **
+
+sobrecarca: mudar assinatura de acordo coma necessidade
+- assinatura: nome + parametros
+
+m1()
+m1(int i)
+m1(float f)
+m1(String s, long l)
+m1(long l, String s)
+
+evolua o conceito do exercicio 3 e defina 1 metodo para calcular o 
+valor total para preencher o tanque. este deve receber como parametro
+o valor da gasolina. faça também duas sobrecargas do construtor.
+
+
+class Carro {
+	String cor;
+	String modelo;
+	int capacidadeTanque;
+	
+	// construtor padrão, vazio.
+	Carro(){}
+	
+	// sobrecarrega do construtor
+	Carro(String cor, String modelo, int capacidadeTanque){
+		this.cor = cor;
+		this.modelo = modelo;
+		this.capacidadeTanque = capacidadeTanque;
+	}
+	
+	// metodos acessorios (encapsulamento)
+	String getCor(){
+		return cor;
+	}
+	void setCor(String cor){
+		this.cor = cor;
+	}
+	
+	String getModelo(){
+		return modelo;
+	}
+	void setModelo(String modelo){
+		this.modelo = modelo;
+	}
+	
+	int getCapacidadeTanque(){
+		return capacidadeTanque;
+	}
+	void setCapacidadeTanque(int capacidadeTanque){
+		this.capacidadeTanque = capacidadeTanque;
+	}
+	
+	double totalValorTanque(double valorCombustivel){
+		return this.capacidadeTanque * valorCombustivel;
+	}
+}
+
+
+
+
+
+** objeto **
+
+// cria objeto usando construtor padrão
+Carro carro = new Carro();
+
+// cria objeto usando construtor sobrecarregado
+Carro carro = new Carro("Azul", "Gol", 25);
+
+// enviando mensagem, isso eh feito através de metodos
+carro.<metodo>;
+carro.getCor(); // Azul
+
+Instancia x Estático atributos e metodos (memoria)
+estado de um objeto
+identidade de um objeto
+represetnação numerica de um objeto
+representacao padrao de um objeto
+
+
+
+
+Exercicio 4:
+evolua o conceito do exercicio 3 criando objetos da classe "Carro".
+use os metodos get/set, quando aplicaveis, para definir os valores
+dos atributos e exibir seus valores. passe também mensagenm para
+o calculo do total para encher o tanque.
+
+// cria uma instancia usando construtor padrao
+Carro carro = new Carro();
+
+// define valores para os atributos atraves dos metodos (set)
+carro.setCor("Amarelo");
+carro.setModelo("Gol");
+carro.setCapacidadeTanque(23);
+
+// exibe valores dos atributos atraves dos metodos (get)
+System.out.println( carro.getCor() );
+System.out.println( carro.getModelo() );
+System.out.println( carro.getCapacidadeTanque() );
+
+// calcula e exibe valor total
+System.out.println( carro.totalValorTanque(5.3) );
+
+
+
+// cria uma instancia usando sobrecarga do construtor
+Carro carro2 = new Carro("Vermelho", "Volksvagem", 32);
+
+// exibe valores dos atributos atraves dos metodos (get)
+System.out.println( carro2.getCor() );
+System.out.println( carro2.getModelo() );
+System.out.println( carro2.getCapacidadeTanque() );
+
+// calcula e exibe valor total para encher o tanque
+System.out.println( carro2.totalValorTanque(7.6) );
