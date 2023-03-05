@@ -200,3 +200,186 @@ System.out.println( carro2.getCapacidadeTanque() );
 
 // calcula e exibe valor total para encher o tanque
 System.out.println( carro2.totalValorTanque(7.6) );
+
+
+
+
+*** relacoes ***
+
+relacao de:
+ - heranca: cria subtipos mais especializados
+ - associacao
+ - interface
+
+
+heranca <---------------------------------------
+
+class A extends B {}
+
+Exercicio 1:
+
+criar a classe Veiculo, Carro, moto e Caminhao
+
+class Veiculo {
+	// atributos e metodos
+}
+
+class Carro extends Veiculo {}
+class Moto extends Veiculo {}
+class Caminhao extends Veiculo {}
+
+
+tipos de herança:
+ - simples: tem apenas uma classe mãe
+ - multipla: tem mais de uma classe mãe
+
+java não tem herança multipla, python, c++ tem.
+
+java não tem heranpa multipla para evitar problema 
+do diamante ou conflito de nomes:
+ -ter atributos e metodos com mesmo nome
+
+
+
+Upcast e Downcast <---------------------------------------
+
+Upcast: pega a classe filha e transforma na mae (usar sempre que possivel)
+
+considerando que B é filho de A
+não precisa ser explicito
+A a = new B();
+
+
+Downcast: pega a classe mae e transforma na filha (evitar uso)
+
+considerando que B é filho de A
+precisa ser explicito
+B a = (B) new A();
+
+
+
+Polimorfismo e Sobrecarga <---------------------------------------
+
+Polimorfismo: "a mesma ação se comportando diferente"
+
+Pagamento
+ - processar()
+
+Boleto
+ - processar()
+
+
+Sobrescrita: "a mesma acao podendo se comportar diferente"
+
+a classe filha sobrescreve um metodo quando acrescenta ou
+executa de uma forma diferente do metodo implementado na
+classe mae. eh uma diferença filosofica.
+
+
+Exercicio:
+crie as classes funcionario, gerente, vendedor e faxineiro.
+realize upcasts e downcasts
+
+class Funcionario {}
+
+class Gerente extends Funcionario {}
+class Vendedor extends Funcionario {}
+class Faxineiro extends Funcionario {}
+
+Funcionario func = new Funcionario(); // instancia padrao
+
+//instancia do tipo upcast (implicito)
+//existem coisas em gerente que tem em funcionario, nada se perde (use muito)
+Funcionario gerente = new Gerente();
+Funcionario vendedor = new Vendedor();
+Funcionario faxineiro = new Faxineiro();
+
+//instancia do tipo downcast (explicito)
+//nem tudo que esta em gerente estara em funcionario (ClassCastException)
+//downcast deve ser evitado
+//aplicando isso aos tipos primitivos...
+Gerente gerente = (Gerente) new Funcionario();
+Vendedor vendedor = (Vendedor) new Funcionario();
+
+
+
+Entendendo Polimorfismo e Sobrecarga
+
+class ClasseMae {
+	void metodo1() {
+		"metodo 1 da classe mae";
+	}
+	void metodo2() {
+		"metodo 2 da classe mae";
+	}
+}
+
+class ClasseFilha1 extends ClasseMae {
+	@Override
+	void metodo1() {
+		"metodo 2 da classe filha"
+	}
+}
+
+class ClasseFilha2 extends ClasseMae {
+	@Override
+	void metodo1(){
+		"metodo 1 da classe filha 2"
+	}
+	@Override
+	void metodo2(){
+		"metodo 2 da classe filha 2"
+	}
+}
+
+class Main {
+
+//vetor do tipo ClasseMae que armazena objetos
+//sempre trabalhar com tipo da classe mae com instancias da classe filha,
+//o que nao aconteceu no item da posicao 2
+
+	ClasseMae[] classes = new ClasseMae[]{
+		new ClasseFilha1(), 
+		new ClasseFilha2(), 
+		new ClasseMae()
+	};
+	
+	for(ClasseMae classe : classes) { //for-each
+		classe.metodo1();
+	}
+	
+	for(ClasseMae classe : classes) { //for-each
+		classe.metodo2();
+	}
+	
+	//aqui acontece a sobrescrita
+	ClasseFilha2 classeFilha2 = new ClasseFilha2();
+	classeFilha2.metodo2();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
