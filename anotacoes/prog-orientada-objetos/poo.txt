@@ -441,3 +441,39 @@ class Cupom {
 
 }
 
+
+
+interface <---------------------------------------
+
+
+interface A {
+}
+
+class B implements A {
+}
+
+exercicio:
+crie uma interface chamada "OperacaoMatematica".
+crie tambem 4 metodos das operacoes basicas: soma,
+subtracao, multiplicacao e divisao.
+tente nao implementar algum dos metodos e veja o que
+acontece.
+
+interface OperacaoMatematica {
+	int somar(int a, int b);
+	int subtrair(int a, int b);
+	int multiplicar(int a, int b);
+	float dividir(float a, float b); 
+}
+
+class Calculadora implements OperacaoMatematica {
+
+}
+
+
+pesquisar:
+  - classe abstrata e concreta
+  - metodos abstratos
+  - caracteristicas das associacoes
+  - super
+  - interface: extends e implements
