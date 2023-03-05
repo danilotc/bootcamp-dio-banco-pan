@@ -360,26 +360,84 @@ class Main {
 
 
 
+associação <---------------------------------------
+
+tipos
+  - estrutural
+    - composicao
+    - agregacao
+  - comportamental
+    - dependencia
+
+estrutural
+  - composicao: "com parte todo"
+    ex.: pessoa e endereco
+   
+
+se pessoa deixar de existir, endereço também não existirá,
+endereço depende de pessoa para existir
+
+class Pessoa {
+	Endereco endereco;
+}
+
+estrutural
+  - agregacao: "sem parte todo"
+    ex.: disciplina e aluno
+
+class Disciplina {
+	Aluno aluno;
+}
 
 
+agregacao x composicao
+
+composicao: um existe se outro existir
+agregacao: um existe de forma independente, nao depende do outro
 
 
+comportamental
+  - dependencia: "depende de"
+
+estará nos métodos, ja que é algo comportamental...
+ha uma dependencia comportamental, o metodo depende de uma entidade
+
+class Compra {
+	finalizar(Cupom cupom){
+	}
+}
 
 
+heranca x associacao
 
+associacao pode mudar valores
+heranca nao, uma vez feita nao muda do decorrer da execucao do sistema
+uma coisa é a outra? heranca, é um
+uma coisa nao é a outra? associacao, vai usar
 
+exercicio:
+apenas para praticar, codifique os exemplos dos slides anteriores sobre 
+as associações.
 
+//uma pessoa é composta por um endereço
+class Pessoa {
+	Endereco endereco;
+}
 
+//associação
+class Disciplina {
+	Aluno aluno;
+}
 
+//comportamental
+class Compra {
+	
+	void finalizar(Cupom cupom){
+		
+	}
+}
 
+class Cupom {
 
-
-
-
-
-
-
-
-
-
+}
 
