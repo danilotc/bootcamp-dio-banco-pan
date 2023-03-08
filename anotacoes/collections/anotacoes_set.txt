@@ -1,0 +1,83 @@
+Trabalhando com Collections - Set
+
+- Iniciar ----------------> algumas formas de iniciar
+- toString()
+- contains() -------------> verifica se um elemento esta na lista
+- toString() -------------> também usado para mostrar o Set formatado
+- Collections.min() ------> mostra o valor minimo cadastrado (numerico)
+- Collections.max() ------> mostra o valor maximo cadastrado (numerico)
+- iterator() -------------> itera sobre os elementos da lista
+- iterator().hasNext() ---> verifica se tem próximo na lista (durante a iteração)
+- iterator().next() ------> pega o próximo na lista (durante a iteração)
+- size() -----------------> mostra o tamanho do Set, total de elementos
+- remove() ---------------> remove um elemento PELO SEU VALOR
+- iterator().remove() ----> remove elemento durante a iteração
+- new LinkedHashMap() ----> cria uma instância do tipo lincada, mapeada e com hash --> (deveria ser LinkedHashSet?)
+- new TreeMap() ----------> cria uma instância do tipo árvore mapeada --> (deveria ser TreeSet?)
+- clear() ----------------> apaga todos os dados
+- isEmpty() --------------> verifica se o Set está vazio
+
+
+Set<Double> notas = new HashSet<>(Arrays.asList(7.0, 8.5, 9.3, 5.7, .0.0, 3.6));
+
+Não é possível trabalhar com índice na lista composta pela estrutura HashSet
+
+mostrar lista na ordem: -----------------------------> notas.toString()
+exibir posicao da nota 5.0: -------------------------> [nao tem indexOf()]
+adicionar 8.0 na posicao 4: -------------------------> [nao tem add()]
+substituir nota 5.0  por 6.0: -----------------------> [nao tem set()]
+conferir se nota 5.0 existe: ------------------------> notas.contains(5.0)
+exibir a terceira nota: -----------------------------> [ ]
+exibir a menor nota: Collections.min(notas)
+exibir a maior nota: Collections.max(notas)
+exibir a soma dos valores:
+
+   Iterator<Double> iterator = notas.iterator();
+   Double soma = 0.0;
+   while(iterator.hasNext()){
+       Double next = iterator.next();
+       soma += next;
+   }
+   
+exibir a media das notas: soma/notas.size()
+remover a nota 0: [ ]
+remover nota da posicao 0: [ ]
+remover notas menores que 7:]
+
+   Iterator<Double> iterator2 = notas.iterator();
+   while(iterator2.hasNext()){
+   	   Double next = iterator2.next();
+   	   if(next<7) iterator2.remove();
+   }
+
+
+
+
+Inicialização de um Set (antes do java 5)
+Set notas = new HashSet();
+
+Adição de Generics (jdk 5)
+HashSet<Double> notas = new HashSet<Double>();
+
+Adição do conceito de Diamont Operator (jdk 7)
+Set<Double> notas = new HashSet<>(); 
+		
+
+Outra forma de inicializar uma coleção do tipo set, essa
+operação causa um erro de compilação.
+Set<Double> notas = Set.of(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
+notas.add(1d);
+notas.remove(5d);
+
+
+
+Por que precisei importar a interface Comparator, mas a interface Comparable
+não foi necessário importar?
+
+
+-----
+exemplos de codigo apresentados no curso para analisar
+https://github.com/cami-la/curso-dio-intro-collections
+
+documentação sobre a collection Set
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html

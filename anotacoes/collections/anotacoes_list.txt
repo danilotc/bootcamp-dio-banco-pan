@@ -1,0 +1,75 @@
+Trabalhando com Collections - List
+
+importante estudar sobre composicao das collections:
+  interfaces (incluindo Comparator e Comparable)
+  implementacoes
+  algoritmos
+  
+
+List
+
+é um tipo de collection no qual se pode interagir com ela
+de forma ordenada, ou seja, é possível ordenar seus dados
+
+aceita elementos duplicados e grande ordem de insercao
+
+quando usar ArrayList e LinkedList?
+
+- ArrayList deve ser usado onde mais operacoes de pesquisa
+  sao necessarias
+- LindedList deve ser usado onde mais operacoes d einsedrvao
+  forem necessarias
+
+principais conceitos:
+- Iniciar ---------------> formas de instanciar collections do tipo list
+- Generics --------------> generics a partir da versão 5 do jdk
+- Diamond Operator ------> diamond a partir da versão 7 do jdk (<>)
+principais metodos:
+- toString() ------------> mostra os dados -----------------> list.toString()
+- indexOf() -------------> mostra posicao de um elemento ---> list.indexOf(valor)
+- add() -----------------> adiciona elemento ---------------> list.add(el), list.add(indice, el)
+- set() -----------------> substitui valor                --> list.set(indice, valor)
+- contains() ------------> verifica se existe na lista    --> list.contains(valor)
+- toString() ------------> mostra os dados
+- get() -----------------> obtem valor de um indice       --> list.get(indice)
+- Collections.min() -----> exibe o menor valor (number)   --> Collections.min(list)
+- Collections.max() -----> exibe o maior valor (number)   --> Collections.max(list)
+- iterator() ------------> itera sobre os elementos
+- iterator().hasNext() --> verifica se tem proximo
+- iterator().next() -----> pega o proximo da lista
+- size() ----------------> verifica tamanho da lista
+- remove() --------------> mostra tamanho da lista
+- iterator().remove() ---> remove elemento da lista com iteracao em loop
+- clear() ---------------> apaga todos os dados da lista
+- isEmpty() -------------> verifica se a lista esta vazia
+
+
+---------------------------------------------------------
+Exercicios propostos  
+---------------------------------------------------------
+
+Resolva esses exercícios utilizando os métodos da implementação LinkedList.
+
+Crie uma lista chamada notas2 e coloque todos os elementos da list ArrayList nessa nova lista e:
+- Mostre a primeira nota da nova lista sem removê-la
+- Mostre a primeira nota da nova lista removendo-a
+
+// lista existente (ArrayList)
+List<Double> notas = new ArrayList<>(); //Generics(jdk 5) - Diamond Operator(jdk 7)
+notas.add(7.0);
+notas.add(8.5);
+notas.add(9.3);
+notas.add(5.0);
+notas.add(7.0);
+notas.add(0.0);
+
+// nova lista (LinkedList)
+// usando LinkedList no tipo porque ele tem os metodos para fazer as acoes solicitadas
+LinkedList<Double> notas2 = new LinkedList<>();
+notas2.addAll(notas);
+
+// acoes solicitadas
+System.out.println(notas2.getFirst()); // peek(), element()
+System.out.println(notas2.pullFirst()); // pull()
+
+Entender as interfaces Comparator e Comparable
