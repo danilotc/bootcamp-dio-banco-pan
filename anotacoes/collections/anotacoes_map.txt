@@ -1,0 +1,119 @@
+Trabalhando com Collections Java - Map
+
+elementos únicos (key) para cada valor (value)
+
+Sempre usando classes que fazem implementações de interfaces
+LinkedHashMap é filha de HashMap que implementa interface Map
+
+Implementações
+- HashTable
+- TreeMap --> ordenação
+
+Iniciar ---------------> Map<String, Double> carros = new HashMap<>();
+put(key, value) -------> método de entrada para map
+toString() ------------> mostra lista
+put(key, value) -------> também usado para sobrescrever, mudar valor com base na chave que não se repete
+containsKey(key) ------> verifica que uma determinada chave existe no dicionário
+get(key) --------------> retorna o valor da chave passada como argumento
+keySet() --------------> retorna um Set com todas as chaves
+values() --------------> retorna uma collection com todos os valores
+entrySet() ------------> retorna um Set com valores do tipo EntrySet
+
+
+Double consumoMaisEficiente = Collections.max(carros.values())
+Set<Map.Entry<String, Double>> entries = carros.entrySet()
+String modeloMaisEficiente = "";
+
+for(Map.Entry<String, Double> entry : entries) {
+	for(entry.getValue().equals(consumoMaisEficiente)) {
+		modeloMaisEficiente = entry.getKey()
+		System.out.println("modelo mais eficiente " + modeloMaisEficiente + " - " + modeloMaisEficiente)
+	}
+}
+
+
+Estudar mais sobre a classe Entry da interface Map
+
+------
+
+menor consumo
+
+Double consumoMenosEficiente = Collections.min(carros.values())
+//Set<Map.Entry<String, Double>> entries = carros.entrySet() //posso manipular valores separadamente
+String modeloMenosEficiente  "";
+for (Map.Entry<String, Double> entry : carro.entrySet()){
+	if(entry.getValue().enquals(consumoMenosEficiente)){
+		modeloMenosEficiente = entry.getKey();
+		System.out.println("modelo menos eficiente: " + modeloMenosEficiente + " - " + consumoMenosEficiente)
+	}
+}
+
+------
+
+soma dos comsumos
+
+Iterator<Double> itaretor = carros.values().itaretor()
+Double soma = 0d
+while(iterator.hasNext()){
+	soma += iterator.next()
+}
+
+------
+
+media dos consumos
+
+soma/carros.size()
+
+-------
+
+remover valor especifico
+
+Iterator<Double> iterator = carros.iterator()
+while(iterator.hasNext()){
+	if(iterator.next().equals(15.6)) iterator.remove()
+}
+
+------
+
+exibir na ordem em que foram inseridos (linkedHashMap)
+
+Map<String, Double> carros = new LinkedHashMap<>();
+carros.put("gol", 14.4)
+carros.put("uno", 15.6)
+carros.put("mobi", 16.1)
+carros.put("hb20", 14.5)
+carros.put("kwid", 15.6)
+carros.toString()
+
+------
+
+exibir ordenado pelo modelo (TreeMap)
+
+Map<String, Double> carros1 = new TreeMap<>(carros);
+carros1.toString()
+
+------
+
+apagar o dicionario d ecarros
+
+carros.clear()
+
+------
+
+conferir se o dicionario está vazio
+
+carros.isEmpty()
+
+------------------------------------------------>
+
+class Livro
+new HashMap()
+new LinkedHashMap()
+new TreeMap()
+new TreeSet()
+addAll(collection.entrySet())
+new ComparatorNomeLivro()
+
+
+----
+https://github.com/cami-la/curso-dio-intro-collections
