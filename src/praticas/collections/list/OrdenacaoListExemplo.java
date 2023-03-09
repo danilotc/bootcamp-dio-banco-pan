@@ -26,6 +26,16 @@ public class OrdenacaoListExemplo {
 		
 		/*
 		 * Está ordenando os dados!
+		 * 
+		 * Referente ao argumento do método comparing descobri o que
+		 * significa aquela estrutura utilizada como argumento, é o
+		 * chamado Reference Method, uma forma de simplificar o uso
+		 * de expressões lambda, que por sua vez, é uma forma de 
+		 * simplificar uma classe anônima.
+		 * 
+		 * Reference Method <-- Lâmbda <-- Classe Anônima
+		 * 
+		 * Explicado na aula Visão geral: Stream API - parte 2
 		 */
 		//meusGatos.sort(Comparator.comparing(Gato::getNome)); // argumento de comparing, o que faz?
 		
