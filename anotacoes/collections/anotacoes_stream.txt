@@ -1,0 +1,103 @@
+Trabalhando com Collections Java - Stream
+
+ordem aleatoria   --> HashMap
+ordem de insersão --> LinkedHashMap
+organizar por id  --> TreeMap, passando um dicionario como argumento
+
+stream dois tipos:
+	operacoes intermediarias
+		retorna um stream e podemos encadear operações
+			op1().op2().op3() --> isso é encadear operações
+	operacoes terminais
+		só pode usar uma operação, não pode encadear várias operações, retorna valor ou objeto
+			op1() --> so pode ser usado assim (?)
+
+Consumer é uma interface funcional
+
+
+ExerciciosStreamAPI.java
+
+Operacao colect "pegue algo de algum lugar e colete para outro lugar"
+
+
+Exercicios
+
+List<String> numerosAleatorios = Arrays.asList("1", "0", "4", "1", "2", "3", "9", "6", "5");
+
+------------> operações intermediárias
+
+------------> imprimir todos os lementos dessa lista de String <--------------
+
+//parte 1
+numerosAleatorios.stream().forEach(new Consumer<String>() {
+	@Override
+	public void accept(String s) {
+		System.out.println(s);
+	}
+});
+
+
+//parte 2 - simplificando para lambda
+numerosAleatorios.stream().forEach(s -> System.out.println(s));
+
+
+//parte 3 - simplificando lambda, removendo stream
+numerosAleatorios.forEach(s -> System.out.println(s));
+
+
+//parte 4 - simplificando ainda mais com Reference Method
+numerosAleatorios.forEach(s -> System.out::println);
+
+
+
+
+--------> pegando os 5 primeiros numeros e colocando dentro de um Set <--------
+
+numerosAleatorios.stream()
+	.limit(5)
+	.collect(Collectors.toSet())
+	.forEach(System.out::println);
+
+
+//podemos guardar esses 5 valores em uma variavel
+Set<String> collectSet = numerosAleatorios.stream()
+	.limit(5)
+	.collect(Collectors.toSet());
+
+
+
+
+----------> transformando string em inteiro <------------
+
+numerosAleatorios.stream()
+	.map(new Functin<String, Integer>() {
+		@Override
+		public Integer apply(String s) {
+			return Integer.parseInt(s);
+		}
+	});
+
+
+//parte 2 - simplificando para lambda
+numerosAleatorios.stream()
+	.map(s -> Integer.parseInt(s));
+
+
+//parte 3 - simplificando ainda mais para reference method
+numerosAleatorios.stream()
+	.map(Integer::parseInt);
+
+
+//parte 4 - transformando em numeros inteiros
+numerosAleatorios.stream()
+	.map(Integer::parseInt)
+	.collect(Collectors.toList())
+	.forEach(System.out::println);
+
+
+//parte 5 - guardando numeros inteiros em uma List
+List<Integer> collectList = numerosAleatorios.stream()
+	.map(Integer::parseInt)
+	.collect(Collectors.toList());
+
+	
