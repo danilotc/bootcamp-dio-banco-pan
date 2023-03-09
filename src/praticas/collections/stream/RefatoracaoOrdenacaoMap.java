@@ -4,10 +4,11 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+
+import praticas.collections.stream.modelo.Contato;
 
 /*
 Dadas as seguintes informações  de id e contato, crie um dicionário e
@@ -16,51 +17,6 @@ id = 1 - Contato = nome: Simba, numero: 2222;
 id = 4 - Contato = nome: Cami, numero: 5555;
 id = 3 - Contato = nome: Jon, numero: 1111;
 */
-
-class Contato {
-	
-	private String nome;
-	private Integer numero;
-	
-	public Contato(String nome, Integer numero) {
-		this.nome = nome;
-		this.numero = numero;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public Integer getNumero() {
-		return numero;
-	}
-
-	public void setNumero(Integer numero) {
-		this.numero = numero;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(nome, numero);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null || getClass() != obj.getClass()) return false;
-		Contato contato = (Contato) obj;
-		return nome.equals(contato.nome) && numero.equals(contato.numero);
-	}
-
-	@Override
-	public String toString() {
-		return "[nome=" + nome + ", numero=" + numero + "]";
-	}
-}
 
 public class RefatoracaoOrdenacaoMap {
 
@@ -74,7 +30,7 @@ public class RefatoracaoOrdenacaoMap {
          * 
          * private static final long serialVersionUID = 1L
          */
-    	System.out.println("--\tOrdem aleatória\t--");
+    	System.out.println("-----> Ordem aleatória");
         Map<Integer, Contato> agenda = new HashMap<>() {{
 	        put(1, new Contato("Simba", 5555));
 	        put(4, new Contato("Cami", 1111));
@@ -86,7 +42,7 @@ public class RefatoracaoOrdenacaoMap {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
 
-        System.out.println("--\tOrdem Inserção\t--");
+        System.out.println("-----> Ordem Inserção");
         Map<Integer, Contato> agenda1 = new LinkedHashMap<>();
         agenda1.put(1, new Contato("Simba", 5555));
         agenda1.put(4, new Contato("Cami", 1111));
@@ -97,14 +53,14 @@ public class RefatoracaoOrdenacaoMap {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
 
-        System.out.println("--\tOrdem id\t--");
+        System.out.println("-----> Ordem id");
         Map<Integer, Contato> agenda2 = new TreeMap<>(agenda);
         System.out.println(agenda2);
         for (Map.Entry<Integer, Contato> entry: agenda2.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
 
-        System.out.println("--\tOrdem número telefone\t--");
+        System.out.println("-----> Ordem número telefone");
         //precisamos organizar os valores. Logo:
         /*Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(new Comparator<Map.Entry<Integer, Contato>>() {
             @Override
@@ -130,7 +86,7 @@ public class RefatoracaoOrdenacaoMap {
                     ": " +entry.getValue().getNome());
         }
 
-        System.out.println("--\tOrdem nome contato\t--");
+        System.out.println("-----> Ordem nome contato");
         //precisamos organizar os valores. Logo:
         Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(Comparator.comparing(
                 cont -> cont.getValue().getNome()));
