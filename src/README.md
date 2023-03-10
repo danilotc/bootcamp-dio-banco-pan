@@ -11,6 +11,8 @@ Aqui você encontra alguns programas desenvolvidos com intuito de praticar os co
 * [Java no Terminal](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/terminal)
 * [Repetição](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/repeticao) e [Arrays](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/arrays)
 * [Métodos em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/metodos)
+* [Collections em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/collections)
+* [Programação OO](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/src/praticas/poo)
 
 ## Desafios realizados
 
