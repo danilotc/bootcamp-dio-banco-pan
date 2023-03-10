@@ -1,41 +1,46 @@
 Trabalhando com Collections Java - Stream
 
+
 ordem aleatoria   --> HashMap
 ordem de insersão --> LinkedHashMap
 organizar por id  --> TreeMap, passando um dicionario como argumento
 
-stream dois tipos:
+
+existem dois tipos de stream:
 	operacoes intermediarias
-		retorna um stream e podemos encadear operações
+		pode encadear várias operações e retorna uma stream
 			op1().op2().op3() --> isso é encadear operações
 	operacoes terminais
-		só pode usar uma operação, não pode encadear várias operações, retorna valor ou objeto
+		só pode usar uma operação, retorna valor ou objeto
 			op1() --> so pode ser usado assim (?)
 
-Consumer é uma interface funcional
 
+Nota: Consumer é uma interface funcional
 
-ExerciciosStreamAPI.java
+Analisar: ExerciciosStreamAPI.java
 
-Operacao colect "pegue algo de algum lugar e colete para outro lugar"
+Operacao collect: "pegua algo de algum lugar e coleta para colocar em outro lugar"
 
-
-SAM (Single Abstract Method) interface com um único método abstrato
-
+Obs.: SAM (Single Abstract Method) interface com um único método abstrato
 
 
 
 
 
-Exercicios
+------------> Exercicios <---------------
+usando operacoes intermediarias da stream
+-----------------------------------------
+
 
 List<String> numerosAleatorios = Arrays.asList("1", "0", "4", "1", "2", "3", "9", "6", "5");
 
-------------> operações intermediárias
 
-------------> imprimir todos os lementos dessa lista de String <--------------
 
-//parte 1
+// Imprimir todos os lementos dessa lista de String
+
+
+----> parte 1 - usando interface funcional (Consumer)
+
 numerosAleatorios.stream().forEach(new Consumer<String>() {
 	@Override
 	public void accept(String s) {
@@ -44,21 +49,28 @@ numerosAleatorios.stream().forEach(new Consumer<String>() {
 });
 
 
-//parte 2 - simplificando para lambda
-numerosAleatorios.stream().forEach(s -> System.out.println(s));
+----> parte 2 - simplificando para Lambda Expression
+
+numerosAleatorios.stream()
+	.forEach(s -> System.out.println(s));
 
 
-//parte 3 - simplificando lambda, removendo stream
+----> parte 3 - simplificando lambda, removendo operacao stream
 numerosAleatorios.forEach(s -> System.out.println(s));
 
 
-//parte 4 - simplificando ainda mais com Reference Method
-numerosAleatorios.forEach(s -> System.out::println);
+----> parte 4 - simplificando ainda mais para Reference Method
+
+numerosAleatorios.forEach(System.out::println);
 
 
 
 
---------> pegando os 5 primeiros numeros e colocando dentro de um Set <--------
+
+// Pegando os 5 primeiros numeros e colocando dentro de um Set
+
+
+----> usando diretamente Reference Method
 
 numerosAleatorios.stream()
 	.limit(5)
@@ -66,16 +78,23 @@ numerosAleatorios.stream()
 	.forEach(System.out::println);
 
 
-//podemos guardar esses 5 valores em uma variavel
-Set<String> collectSet = numerosAleatorios.stream()
+// Podemos guardar esses 5 valores em uma variavel Set por causa 
+// do metodo toSet da classe Collectors
+
+Set<String> numerosAleatorios5PrimeirosNaoRepetidos = numerosAleatorios.stream()
 	.limit(5)
 	.collect(Collectors.toSet());
 
 
 
 
-----------> transformando lista de string ("1","2","3") em lista de inteiro (1,2,3) <------------
-Vai continuar sendo uma list, porém de números inteiros.
+
+// Transformando lista de string ("1","2","3") em lista de inteiro (1,2,3)
+
+// Vai continuar sendo uma list, porém de números inteiros.
+
+
+----> parte 1 - usando Functional Interface
 
 numerosAleatorios.stream()
 	.map(new Functon<String, Integer>() {
@@ -86,25 +105,30 @@ numerosAleatorios.stream()
 	});
 
 
-//parte 2 - simplificando para lambda
+----> parte 2 - simplificando para Lambda Expression
+
 numerosAleatorios.stream()
 	.map(s -> Integer.parseInt(s));
 
 
-//parte 3 - simplificando ainda mais para reference method
+----> parte 3 - simplificando ainda mais para Reference Method
+
 numerosAleatorios.stream()
 	.map(Integer::parseInt);
 
 
-//parte 4 - transformando em numeros inteiros
+----> parte 4 - coletando os numeros inteiros para colocar numa List
+
 numerosAleatorios.stream()
 	.map(Integer::parseInt)
-	.collect(Collectors.toList())
-	.forEach(System.out::println);
+	.collect(Collectors.toList());
+	
+//	.forEach(System.out::println);
 
 
-//parte 5 - guardando numeros inteiros em uma List
-List<Integer> collectList = numerosAleatorios.stream()
+----> parte 5 - guardando os numeros inteiros em uma List
+
+List<Integer> numerosAleatoriosInteiros = numerosAleatorios.stream()
 	.map(Integer::parseInt)
 	.collect(Collectors.toList());
 
@@ -112,7 +136,8 @@ List<Integer> collectList = numerosAleatorios.stream()
 
 
 
-----------> pegando numeros pares e maiores que 2 e colocar em um alista
+// Pegar numeros pares maiores que 2 e colocar em um alista
+
 
 List<Integer> listParesMaioresQue2 = numerosAleaorios.stream()
 	.map(Integer::parseInt)
@@ -122,23 +147,28 @@ List<Integer> listParesMaioresQue2 = numerosAleaorios.stream()
 			if (i %2 == 0 && i > 2) return true
 			return false;
 		}
-	}).collect(Collections.toList());
-
-
-----------> simplicicando para lambda expression
-
-List<Integer> listParesMaioresQue2 = numerosAleaorios.stream()
-	.map(Integer::parseInt)
-	.filter(i -> (i %2 == 0 && i > 2))
+	})
 	.collect(Collections.toList());
 
 
+----> simplicicando para Lambda Expression
+
+List<Integer> listParesMaioresQue2 = numerosAleaorios.stream()
+	.map(Integer::parseInt)
+	.filter(i -> (i % 2 == 0 && i > 2))
+	.collect(Collectors.toList());
 
 
------------> mostrando a media dos numeros
+
+
+
+// Mostrando a media dos numeros
+
+
+----> parte 1 - usando Functional Interface
 
 numerosAleatorios.stream()
-	.mapToInt(new ToIntfunction<String>() {
+	.mapToInt(new ToIntFunction<String>() {
 		@Override
 		public int applyAsInt(String s) {
 			return Integer.parseInt(s);
@@ -146,17 +176,24 @@ numerosAleatorios.stream()
 	});
 
 
-----------> simplificando
+---> parte 2 - simplificando para Lambda Expression
 
----> parte 1 - para lambda
 numerosAleatorios.stream()
 	.mapToInt(s -> Integer.parseInt(s));
-	
----> parte 2 - para reference method
+
+
+---> parte 3 - simplificando para Reference Method
+
 numerosAleatorios.stream()
 	.mapToInt(Integer::parseInt);
 
----> retornando media
+
+
+
+
+// Retornando media
+
+
 numerosAleatorios.stream()
 	.mapToInt(Integer::parseInt)
 	.average()
@@ -168,14 +205,15 @@ numerosAleatorios.stream()
 	});
 
 
-------> simplificando lambda expression
+----> simplificando para Lambda Expression
 
 numerosAleatorios.stream()
 	.mapToInt(Integer::parseInt)
 	.average()
 	.ifPresent(v -> System.out.println(v));
 
------> simplificando para reference method
+
+----> simplificando para Reference Method
 
 numerosAleatorios.stream()
 	.mapToInt(Integer::parseInt)
@@ -185,7 +223,11 @@ numerosAleatorios.stream()
 
 
 
-------> removendo após transformar para inteiros
+
+// Removendo após transformar para inteiros
+
+
+----> usando predicate (estudar)
 
 numerosAleatoriosInteiros.removeIf(new Predicate<Integer>() {
 	@Override
@@ -195,9 +237,10 @@ numerosAleatoriosInteiros.removeIf(new Predicate<Integer>() {
 	}
 });
 
--------> simplificando para lambda expression
 
-numerosAleatoriosInteiros.removeIf(i -> (i %2 != 0));
+----> simplificando para Lambda Expression
+
+numerosAleatoriosInteiros.removeIf(inteiro -> (inteiro % 2 != 0));
 
 
 -------> resolver exercicios <-------

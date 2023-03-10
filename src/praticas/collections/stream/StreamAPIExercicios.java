@@ -26,16 +26,6 @@ public class StreamAPIExercicios {
 //                .collect(Collectors.toSet());
 //        System.out.println(numerosAleatorios5Primeiros);
 
-        
-        
-        
-        
-        
-//        ------------> CONTINUAR SEPARAÇÃO A PARTIR DAQUI <--------------
-        
-        
-        
-        
 //        System.out.println("Transforme esta lista de String em uma lista de números inteiros.");
 //        List<Integer> numerosAleatorios1 = numerosAleatorios.stream()
 //                .map(Integer::parseInt).collect(Collectors.toList());
@@ -73,6 +63,16 @@ public class StreamAPIExercicios {
 //        numerosAleatoriosInteger.removeIf(i -> (i % 2 != 0));
 //        System.out.println(numerosAleatoriosInteger);
 
+        
+        
+        
+        
+        
+//        ------------> CONTINUAR SEPARAÇÃO A PARTIR DAQUI <--------------
+        
+        
+        
+        
 //        Para você
         System.out.println("Ignore os 3 primeiros elementos da lista e imprima o restante:");
         numerosAleatoriosInteger.stream()
