@@ -10,7 +10,9 @@ Aqui você encontrar anotações sobre algumas aulas que podem ser adicionadas g
 * [Aprendendo a Sintaxe Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/sintaxe-java)
 * [Lógica Condicional e Controle de Fluxos em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/logica-condicional)
 * [Estruturas de Repetição e Arrays em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/repeticao-arrays)
-* Estrutura de Dados em Java
+* [Estrutura de Dados em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/estrutura-de-dados)
+* [Programação Orientada a Objetos em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/prog-orientada-objetos)
+* [Trabalhando com Collections em Java](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/anotacoes/collections)
 
 
 Já viu os [desafios](https://github.com/danilotc/bootcamp-dio-banco-pan/tree/main/desafios)?
