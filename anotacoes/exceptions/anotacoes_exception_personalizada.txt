@@ -1,11 +1,103 @@
 Tratamento de Exceções em Java
 
+Classificação:
+	- Error
+	- Unchecked (Runtime) 
+		- podem ser tratados
+		- não tem como prevê
+		- erros de lógica
+		- herdam da classe RuntimeException ou Error
+	- Checked Exception
+		- devem ser evitados 
+		- devem ser tratados
+		- o programa não roda se não tratar erros checados
+		- herdadas de Exception e não de RuntimeException
+		- compilador impoe requisito: "capturar ou declarar"
+		- se lançar a excecao é capturada/declarada em throws
+		- erro de compilacao se nao for capturada/declarada
+
+Classes que herdam de RuntimeException não precisa ser obrigatóriamente tradatas.
+
+Todas as classes que herdam de Exception é obrigatório tratar as exceções que ocorrerem, até porque não serão erros causados pela subclasse de RuntimeException.
+
+
+Error
+	- erros não checados peo compilador
+	- eventos irrecuperáveis
+	- nao pode mais ser tratado
+Exception (checked)
+	- condicoes exceptionais checads pelo compilador
+	- eventos recuperáveis
+RuntimeException (unchecked)
+	- excecos não checadas pelo compilador
+	- erros de lógica
+
+
+Tratando excecoes
+	try, catch, finally --> trata excecoes
+	throws --> um metodo pode lançar uma ou mais excecoes
+	throw  --> lança explicitamente uma exception
 
 
 
+---------------------------------
+       unchecked exception
+---------------------------------
 
+
+import java.swing.JOptionPane;
+
+public class UnckeckException {
+	public static void main(String[] args){
+		do {
+			try{
+				String a = JOptionPane.showInputDialog("Numerador: );
+				String b = JOptionPane.showInputDialog("Denomidador: );
+				int resultado = dividir(Integer.parseInt(a), Integer.pasrseInt(b));
+				System.out.println("Resultado: " + resultado);
+				break;
+			} catch(NumberFormatException e) {
+				e.printStackTrace(); //imprima sempre exceção no console
+				JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro." + e.getMessage());
+			} catch(ArithmentException e) {
+				e.printStackTrace();
+				JOptionPane.showMessageDialog(null, "Impossível dividir um número por 0.");
+			}finally {
+				System.out.println("bloco finally executou");
+			}
+		}while(true);
+	}
+	
+	public static int dividir(int a, int b){
+		return a / b;
+	}
+}
+
+
+OBSERVAÇÕES:
+
+se o teste divisão por zero estiver sendo feito com variáveis do tipo
+double o resultado será um "Infinity"
+
+https://www.baeldung.com/java-infinity
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html
+
+se o teste divisão por zero estiver sendo feito com variáveis do tipo
+int o resultado será uma exception "ArithmenticException"
 
 
 
 ------> estudar readme
 https://github.com/cami-la/exceptions-java
+
+
+Documentação
+
+Error
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Error.html
+
+Exception
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html
+
+RuntimeException
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html
