@@ -87,6 +87,64 @@ int o resultado será uma exception "ArithmenticException"
 
 
 
+
+
+
+-------------------------------------------
+        checked exception parte 1
+-------------------------------------------
+
+----> lançando exceção
+
+public CheckedException {
+
+	public static void main(String[] args) throws ExceptionMae {
+		chamandoMetodo();
+	}
+	
+	public static void chamandoMetodo() throws ExceptionMae {
+		//alguma logica aqui
+	}
+}
+
+
+
+
+
+
+-------------------------------------------
+        checked exception parte 2
+-------------------------------------------
+
+----> tratando exceção
+
+public CheckedException {
+
+	public static void main(String[] args) {
+		try{
+			chamandoMetodo();
+		}catch(ExcecaoEspecifica e) {
+			print("mensagem" + e.getCause())
+		}catch(ExcecaoGenerica e){
+			print("mensgem inesperada gerada por uma excecao generica" + e.getCause()) //testar todos os metodos de "e"
+			e.printStackTrace()
+		}finally{
+			print(mensagem)
+		}
+	}
+	
+	public static void chamandoMetodo() throws ExceptionMae {
+		//alguma logica aqui
+	}
+}
+
+
+
+
+
+
+
+
 ------> estudar readme
 https://github.com/cami-la/exceptions-java
 
