@@ -181,6 +181,20 @@ Tudo isso é incrível, um pouco confuso, mas incrível! =)
 
 
 
+-------------------------------------------
+       exception customizada parte 2
+-------------------------------------------
+
+----> Lição de casa (prof. vale nota? --> nostaugia) =D
+
+O arquivo CustomizedException2.java também está todo comentado para consulta futura 
+e entender o fluxo de funcionamento dos tratamentos realizados.
+
+
+
+
+
+
 
 
 ------> estudar readme
