@@ -143,6 +143,44 @@ public CheckedException {
 
 
 
+-------------------------------------------
+       exception customizada parte 1
+-------------------------------------------
+
+----> criando acoplamento e tratando uma exceção de forma customizada
+
+O arquivo CustomizedException.java está todo comentado, o código ficou até um 
+pouco poluído, mas fiz isso para explicar o que aprendi em relação a cada parte 
+do tratamento.
+
+Fizemos um desacoplamento de código, ou seja, separamos as responsabilidades do 
+programa em métodos diferentes. A leitura e verificação do arquivo está em um 
+método, enquanto a leitura e escrita dos dados estão em outro método, cada um 
+com sua responsabilidade. Parece que isso é o chamado desacoplamento, que é 
+separar diferentes responsabilidades que estavam em um único método.
+
+Uma nova classe foi criada para tratar uma exceção de forma personalizada, com 
+isso é possível criar novas exceções para serem lançadas pelo método e, por sua
+vez, serem tratadas em outro método, por exemplo, o método que o chamou. Essa 
+classe tem algumas regrinhas para funcionar, que tembém é boa prática:
+
+1) O nome da classe precisa terminar com a palavra 'Exception'.
+2) A classe precisa estender da classe Exception, a mãe das exceptions na hierarquia.
+
+Com isso, o método onde a exception estourou (FileNotFoundException) terá um 
+bloco catch, é nesse bloco que uma nova exception será criada (throw new). 
+Quando essa nova exceção é criada, este mesmo método está lançando exatamente 
+esta exception para ser tratada no método que a chamou. Já o método que a chamou, 
+por sua vez, criou mais um bloco para tratar, especificamente, esta exception 
+que foi criada e lançada pelo método.
+
+Tudo isso é incrível, um pouco confuso, mas incrível! =)
+
+
+
+
+
+
 
 
 ------> estudar readme
