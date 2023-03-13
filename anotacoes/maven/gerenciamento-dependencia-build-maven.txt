@@ -1,0 +1,138 @@
+Gerenciamento de Dependencias e Build em Java com Maven
+
+
+
+----> WINDOWS
+
+adicionar o maven nas variáveis de ambiente, na variável Path
+
+verificar se esta tudo reconhecido pelo sistema
+
+mvn --version
+
+
+
+----> LINUX
+
+descompactar arquivo
+tar xf file.gz
+
+adicionando maven no path do sistema no final do arquivo .bashrc
+export PAPH=caminhoMaven:$PAPH
+
+verificando instalacao do maven
+mvn --version
+
+
+
+----> criando um projeto via linha de comando
+
+que comando gigantesco é esse cara? facilita a coisa ai!
+eu não copiei aquele comando enorme porque não faz o menor
+sentido fazer aquilo via linha de comando!
+
+parece ser um comando que busca um templete na internet e 
+cria o projeto java para trabalhar.
+
+o comando está aqui...
+https://maven.apache.org/archetypes/maven-archetype-quickstart/
+
+
+
+----> comandos que auxiliam no dia a dia
+
+compilar: compile
+testar: test
+empacotar: package
+limpar diterório de trabalho (target): clean
+
+//compila automaticamente o projeto e adiciona no diretório
+//chamado target, será geado um arquivo .class
+mvn compile
+
+//testando a aplicacao
+//procura todas as classes de testes e realiza a avaliação 
+//do teste
+mvn test
+
+//empacotar software (jar)
+//sera alvo um arquivo .jar na pasta target
+mvn package
+
+//limpar diretorio de trabalho (apagar pasta target)
+mvn clean
+
+
+
+----> criando diferentes projetos com apache-maven
+
+maven archtype
+
+pesquisa sobre "maven archtype list"
+
+https://maven.apache.org/archetypes
+https://mvnrepository.com
+
+
+
+----> POM
+
+pom - project object model
+
+super pom é a classe mae do pom que foi definido no projeto
+https://maven.apache.org/ref/3.6.3/maven-model-builder/super-pom.html
+
+
+
+----> repositorios
+
+local ==> .m2/repository
+remoto
+
+
+
+----> como adicionar dependencias
+
+adicionar uma nova dependencia no arquivo pom.xml
+
+executar a compilação: mvn compile
+
+
+
+----> gerencia dependencia
+
+dois tipos:
+- diretas: declarada direto no pom do compontente
+- transitivas: dependencias no componente
+
+publicar um componente do seu projeto, seu projeto se torna
+uma dependencia
+
+mvn install
+
+
+
+----> transitividade e escopo
+
+classpath
+- runtime
+- test
+- compile
+
+escopo compile
+escopo provided
+escopo runtime
+escopo test
+escopo system
+escopo import
+
+
+
+----> escopo, dependencias opcionais e exclusions
+
+comandos para ver o classpath
+
+
+
+----
+https://maven.apache.org/
