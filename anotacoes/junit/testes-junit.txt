@@ -1,0 +1,80 @@
+Testes Unitarios com JUnit
+
+
+
+----> teste
+
+usar sempre junit jupter engine
+https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+
+
+// todo teste retorna um void
+
+@Test
+void nomeQueIdentifiqueBemOTeste() {
+	Pessoa jessica = new Pessoa("Jessica", LocalDate.of(2000,1,1));
+	Assertions.assertEquals(22, jessica.getIdade());
+}
+
+@Test
+void deveRetornarSeEhMaiorDeIdade() {
+	Pessoa joao = new Pessoa("Joao", LocaDate.of(2016,1,2));
+	Assertions.assertTrue(joao.ehMaiorDeIdade());
+	
+	Pessoa maria = new Pessoa("Maria", LocaDate.of(2023,1,1));
+	Assertions.assertFalse(maria.ehMaiorDeIdade());
+}
+
+
+
+----> assertions
+
+Assertions.<varios-assertins>
+
+@Test
+void validarLancamentos() {
+	int[] array1 = {10, 5, 23, 7, 8};
+	int[] array2 = {-1, 5, 6, 8, 6};
+	
+	// espectativa: o está no segundo parametro tem que ser igual ao primeiro
+	Assertins.assertArrayEquals(array1, array2);
+	
+	// expectativa: o que esta no segundo prametro eh diferente do primeiro
+	Assertions.assertNotEquals(array1, array2);
+}
+
+
+@Test
+void validarSeObjetoEstaNulo() {
+	Pessoa pessoa = null;	
+	Assertions.assertNull(pessoa);
+	
+	pessoa = new Pessoa("Josefa", LocalDate.of(2001, 1, 1));
+	Assertions.assertNotNull(pessoa);
+}
+
+
+Para nao precisar escrever tanto "Assertions" podemos fazer um
+impor estático:
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+Dessa forma, nao sera necessario ficar escrevendo a classe Assertions
+toda vez que precisar usar um de seus metodos.
+
+antes:
+Assertions.assertNot()
+
+depois:
+assertNot()
+
+
+
+----> after e before
+----> assertins e testes condicionais
+----> testando exceptions
+
+nao da para compreender com essa didatica, vou melhorar o entendimento 
+depois em outros cursos.
