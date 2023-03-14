@@ -1,0 +1,38 @@
+Abstraindo um Bootcamp Usando Orientação a Objetos em Java
+
+
+---> Abstracao do projeto
+
+Bootcamp
+  nome
+  descricao
+  data inicial
+  data final
+  devs
+    nome
+    mentorias
+    atividades
+    inscrever no bootcamp()
+    progredir()
+    calcular total xp()
+    exibir cursos()
+  mentorias
+    titulo
+    descricao
+    data da mentoria
+    calcular xp()
+  atividades/cursos
+    titulo
+    descricao
+    carga horaria
+    calcular xp()
+
+conteudo
+  titulo
+  descricao
+  calcular xp()
+
+
+
+----> referencia
+https://github.com/cami-la/desafio-poo-dio
