@@ -1,0 +1,1 @@
+https://github.com/cassianobrexbit/dio-live-dynamodb
