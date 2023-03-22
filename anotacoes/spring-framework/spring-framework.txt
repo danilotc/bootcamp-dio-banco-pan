@@ -1,0 +1,102 @@
+Imersão no Spring Framework com Spring Boot
+
+conhecendo o springboot
+primeiros passos
+beans versus components
+scopes - singleton ou prototype
+properties velue
+configuration properties
+conceito de orm e jpa
+spring data jpa
+conexao com postgres
+jpa repository
+
+----------------------------------------->
+
+criar um projeto com initializr
+importar projeto maven
+conhecendo a estrutura
+bean e commandlinerunner
+
+https://start.spring.io
+dependencias: nehum
+
+eliminando a existencia do new na criação de instancias
+
+@Component
+public class MyApp implements CommandLineRunner {
+	
+	@Autowired
+	private Calculadora calculadora;
+	
+	@Override
+	public void run(String... args) throws Exception {
+		System.our.println("resultado: " + calculadora.somar(7,5));
+	}
+}
+
+@Component
+public class Calculadora {
+	public int somar(int numero1, int numero2) {
+		return numero1+numero2;
+	}
+}
+
+----------------------------------------->
+
+quando usar @Ben
+quando usaqr @Component
+implementar a IoC e DI
+
+----------------------------------------->
+
+conceito de scope
+configurando objeto singleton
+configurando objeto prototype
+
+----------------------------------------->
+
+o poderoso application.properties
+@Value
+default value
+
+----------------------------------------->
+
+o poderoso application.properties
+@ConfigurationProperties (prefix)
+
+----------------------------------------->
+
+o que é orm
+java persintence api (jpa)
+mapeamentos
+entityManager
+
+----------------------------------------->
+
+spring data jpa
+
+https://start.spring.io
+
+dependencias: spring data jpa, h2 database
+
+@Entity
+@Table(name = "tab_user")
+@Id
+@GeneratedValue
+@Column(name = "new_name")
+
+Model
+Repository
+
+@Autowired
+
+
+----------------------------------------->
+
+jpa repository
+
+----------------------------------------->
+
+para analisar
+https://github.com/digitalinnovationone/dio-springboot
